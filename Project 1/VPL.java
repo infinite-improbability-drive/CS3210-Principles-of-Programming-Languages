@@ -235,7 +235,7 @@ public class VPL
          mem[ bp+2 + a ] = - mem[ bp+2 + b ];
       }
       else if ( op == litCode ) {			// 22 literal
-
+         mem[ bp+2 + a ] = b;
       }
       else if ( op == copyCode ) {			// 23 copy
 
@@ -247,7 +247,8 @@ public class VPL
 
       }
       else if ( op == haltCode ) {			// 26 halt
-
+        System.out.println("Program End");
+        System.exit(1);
       }
       else if ( op == inputCode ) {			// 27 input
 

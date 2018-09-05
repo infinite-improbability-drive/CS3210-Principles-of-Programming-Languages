@@ -1,0 +1,17 @@
+32 1   allocate one global cell named "0"
+
+4 10   make plenty of scratch space in the "main" stack frame
+
+22 0 17   local cell 0 <- constant 17
+33 0 0    global cell 0 <- local cell 0
+
+27 1    local cell 1 <- input from keyboard
+
+34 2 0  local cell 2 <-  global cell 0
+
+9 3 1 2  local cell 3 <- input + copy of global value
+
+28 3   display the final answer
+29     newline
+
+26     halt

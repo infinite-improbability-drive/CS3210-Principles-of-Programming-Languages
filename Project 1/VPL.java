@@ -196,40 +196,75 @@ public class VPL
 	     }
       }
       else if ( op == addCode ) {			// 9 add
-	     mem[ a ] = mem[ b ] + mem[ c ];
+        mem[ bp+2 + a ] = mem[ bp+2 + b ] + mem[ bp+2 + c ];
       }
       else if ( op == subCode ) {			// 10 subtract
-
+        mem[ bp+2 + a ] = mem[ bp+2 + b ] - mem[ bp+2 + c ];
       }
       else if ( op == multCode ) {			// 11 multiply
-
+        mem[ bp+2 + a ] = mem[ bp+2 + b ] * mem[ bp+2 + c ];
       }
       else if ( op == divCode ) {			// 12 divide
-
+        mem[ bp+2 + a ] = mem[ bp+2 + b ] / mem[ bp+2 + c ];
       }
       else if ( op == remCode ) {			// 13 remainder
-
+        mem[ bp+2 + a ] = mem[ bp+2 + b ] % mem[ bp+2 + c ];
       }
       else if ( op == equalCode ) {			// 14 equal
-
+        if (mem[ bp+2 + b ] == mem[ bp+2 + c ]) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
       else if ( op == notEqualCode ) {		// 15 not equal
-
+        if (mem[ bp+2 + b ] != mem[ bp+2 + c ]) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
       else if ( op == lessCode ) {			// 16 less than
-
+        if (mem[ bp+2 + b ] < mem[ bp+2 + c ]) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
       else if ( op == lessEqualCode ) {		// 17 less than or equal
-
+        if (mem[ bp+2 + b ] <= mem[ bp+2 + c ]) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
       else if ( op == andCode ) {			// 18 and 
-
+        if ((mem[ bp+2 + b ] == 1) && (mem[ bp+2 + c ] == 1)) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
       else if ( op == orCode ) {			// 19 or
-
+        if ((mem[ bp+2 + b ] == 1) || (mem[ bp+2 + c ] == 1)) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
       else if ( op == notCode ) {			// 20 not
-
+        if (mem[ bp+2 + b ] == 0) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
       else if ( op == oppCode ) {			// 21 opposite
          mem[ bp+2 + a ] = - mem[ bp+2 + b ];
@@ -238,7 +273,7 @@ public class VPL
          mem[ bp+2 + a ] = b;
       }
       else if ( op == copyCode ) {			// 23 copy
-
+        mem[ bp+2 + a ] = mem[ bp+2 + b ];
       }
       else if ( op == getCode ) {			// 24 get
 
@@ -254,7 +289,7 @@ public class VPL
 
       }
       else if ( op == outputCode ) {		// 28 output
-
+        System.out.println(mem[ bp+2 + a ]);
       }
       else if ( op == newlineCode ) {		// 29 newline
 

@@ -185,7 +185,9 @@ public class VPL
          sp = sp + a;
       }
       else if ( op == returnCode) {			// 5 return
-
+          ip = mem[rip];
+          bp = m[rbp];
+          sp = bp + 2;
       }
       else if ( op == getRetvalCode ) {		// 6 get retval
          mem[ a ] = rv;

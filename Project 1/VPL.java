@@ -128,11 +128,11 @@ public class VPL
 
     do {
 
-/*    // show details of current step
+      // show details of current step
       System.out.println("--------------------------");
       System.out.println("Step of execution with IP = " + ip + " opcode: " +
           mem[ip] + 
-         " bp = " + bp + " sp = " + sp + " hp = " + hp + " rv = " + rv );
+         " bp = " + bp + " sp = " + sp + " hp = " + hp + " rv = " + rv + " gp = " + gp );
       System.out.println(" chunk of code: " +  mem[ip] + " " +
                             mem[ip+1] + " " + mem[ip+2] + " " + mem[ip+3] );
       System.out.println("--------------------------");
@@ -140,7 +140,7 @@ public class VPL
       showMem( codeEnd+1, sp+3 );
       System.out.println("hit <enter> to go on" );
       keys.nextLine();
-*/
+
 
       oldIp = ip;
 
@@ -301,13 +301,14 @@ public class VPL
 
       }
       else if ( op == allocGlobalCode ) { 	// 32 allocate global space
-
+        gp = codeEnd + 1;
+        sp = codeEnd + 1 + a;
       }
       else if ( op == toGlobalCode ) {		// 33 copy to global
-
+        mem[ gp + a ] = mem[ bp+2 + b];
       }
       else if ( op == fromGlobalCode ) { 	// 34 copy from global
-
+        mem[ bp+2 +  a] = mem[ gp + b];
       }
       else if ( op == debugCode ) {			// 35 debug
 

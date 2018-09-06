@@ -170,7 +170,7 @@ public class VPL
       // put your work right here!
 
       if ( op == callCode ) {				// 2 call
-         mem[ bp+2 + a ] = - mem[ bp+2 + b ];
+          
       }
       else if ( op == passCode ) {			// 3 pass
 

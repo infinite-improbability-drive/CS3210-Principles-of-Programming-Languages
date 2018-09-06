@@ -8,7 +8,7 @@ public class VPL
 
   static int max;
   static int[] mem;
-  static int ip, bp, sp, rv, hp, numPassed, gp;
+  static int ip, bp, sp, rv, hp, numPassed, gp, rip, rbp;
   static int step;
 
   public static void main(String[] args) throws Exception {
@@ -186,7 +186,7 @@ public class VPL
       }
       else if ( op == returnCode) {			// 5 return
           ip = mem[rip];
-          bp = m[rbp];
+          bp = mem[rbp];
           sp = bp + 2;
       }
       else if ( op == getRetvalCode ) {		// 6 get retval

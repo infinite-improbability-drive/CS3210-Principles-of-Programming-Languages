@@ -169,11 +169,17 @@ public class VPL
 
       // put your work right here!
 
-      if ( op == callCode ) {				// 2 call
-          
+      if ( op == callCode ) {             // 2 call
+          rip=ip;
+          rbp=bp;
+          bp=sp;
+          sp=sp+2+numPassed;
+          ip=a;
+          numPassed=0;
       }
-      else if ( op == passCode ) {			// 3 pass
-
+      else if ( op == passCode ) {          // 3 pass
+          mem[ sp + 2 + numPassed]= a;
+          numPassed++;
       }
       else if ( op == allocCode ) {			// 4 locals
          sp = sp + a;

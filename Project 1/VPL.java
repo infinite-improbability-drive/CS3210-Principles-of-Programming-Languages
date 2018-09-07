@@ -282,13 +282,13 @@ public class VPL
          mem[ bp+2 + a ] = b;
       }
       else if ( op == copyCode ) {			// 23 copy
-        mem[ bp+2 + a ] = mem[ bp+2 + b ];
+         mem[ bp+2 + a ] = mem[ bp+2 + b ];
       }
       else if ( op == getCode ) {			// 24 get
-
+         mem[ bp+2 + a ] = mem[ mem[ bp+2 + b ] + mem[ bp+2 + c ] ];
       }
       else if ( op == putCode ) {			// 25 put
-
+          mem[ mem[ bp+2 + a ] + mem[ bp+2 + b ] ] = mem[ bp+2 + c ];
       }
       else if ( op == haltCode ) {			// 26 halt
         System.out.println("Program End");
@@ -318,7 +318,7 @@ public class VPL
         mem[ gp + a ] = mem[ bp+2 + b];
       }
       else if ( op == fromGlobalCode ) { 	// 34 copy from global
-        mem[ bp+2 +  a] = mem[ gp + b];
+        mem[ bp+2 + a] = mem[ gp + b];
       }
       else if ( op == debugCode ) {			// 35 debug
 

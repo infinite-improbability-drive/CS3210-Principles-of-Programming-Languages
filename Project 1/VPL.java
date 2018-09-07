@@ -295,7 +295,10 @@ public class VPL
         System.exit(1);
       }
       else if ( op == inputCode ) {			// 27 input
-
+         System.out.print("? ");
+         while (keys.hasNextInt()) {
+             mem[ bp+2 + a ] = keys.nextInt();
+         }
       }
       else if ( op == outputCode ) {		// 28 output
         System.out.println(mem[ bp+2 + a ]);
@@ -304,7 +307,9 @@ public class VPL
         System.out.println();
       }
       else if ( op == symbolCode ) {		// 30 symbol
-
+          if (( mem[ bp+2 + a] >= 32 ) && ( mem[ bp+2 + a] <= 126 )) {
+              System.out.print((char) mem[ bp+2 + a ]);
+          }
       }
       else if ( op == newCode ) {			// 31 new
 

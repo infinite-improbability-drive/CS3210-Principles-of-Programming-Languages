@@ -88,6 +88,7 @@ public class VPL
     //System.out.println("after first scan:");
     //showMem( 0, k-1 );
 
+    // replace labels
     // fill in all the holes:
     int index;
     for( int m=0; m<holes.size(); ++m )
@@ -170,9 +171,9 @@ public class VPL
       // put your work right here!
 
       if ( op == callCode ) {             // 2 call
-          rip=ip;
-          rbp=bp;
-          bp=sp;
+          rip = ip;
+          rbp = bp;
+          bp = sp;
           sp=sp+2+numPassed;
           ip=a;
           numPassed=0;
@@ -193,7 +194,7 @@ public class VPL
          mem[ a ] = rv;
       }
       else if ( op == jumpCode ) {			// 7 jump
-
+         ip = a;
       }
       else if ( op == condJumpCode ) {		// 8 cond
          if ( mem[ a ] != 0 ) {
@@ -310,7 +311,8 @@ public class VPL
       }
       else if ( op == allocGlobalCode ) { 	// 32 allocate global space
         gp = codeEnd + 1;
-        sp = codeEnd + 1 + a;
+        bp = codeEnd + 1 + a;
+        sp = bp + 2;
       }
       else if ( op == toGlobalCode ) {		// 33 copy to global
         mem[ gp + a ] = mem[ bp+2 + b];

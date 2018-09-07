@@ -312,6 +312,9 @@ public class VPL
           }
       }
       else if ( op == newCode ) {			// 31 new
+        int m = mem[ bp+2 + b ];
+        hp = hp - m;
+        mem[ bp+2 + a] = hp;
 
       }
       else if ( op == allocGlobalCode ) { 	// 32 allocate global space

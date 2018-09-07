@@ -300,7 +300,7 @@ public class VPL
         System.out.println(mem[ bp+2 + a ]);
       }
       else if ( op == newlineCode ) {		// 29 newline
-
+        System.out.println();
       }
       else if ( op == symbolCode ) {		// 30 symbol
 

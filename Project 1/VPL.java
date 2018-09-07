@@ -8,7 +8,7 @@ public class VPL
 
   static int max;
   static int[] mem;
-  static int ip, bp, sp, rv, hp, numPassed, gp;
+  static int ip, bp, sp, rv, hp, numPassed, gp, rip, rbp;
   static int step;
 
   public static void main(String[] args) throws Exception {
@@ -186,7 +186,7 @@ public class VPL
       }
       else if ( op == returnCode) {			// 5 return
           ip = mem[rip];
-          bp = m[rbp];
+          bp = mem[rbp];
           sp = bp + 2;
       }
       else if ( op == getRetvalCode ) {		// 6 get retval
@@ -300,7 +300,7 @@ public class VPL
         System.out.println(mem[ bp+2 + a ]);
       }
       else if ( op == newlineCode ) {		// 29 newline
-
+        System.out.println();
       }
       else if ( op == symbolCode ) {		// 30 symbol
 

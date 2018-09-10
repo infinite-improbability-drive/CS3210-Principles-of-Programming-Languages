@@ -267,7 +267,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == notCode ) {			// 20 not
+      else if ( op == notCode ) {			// 20 not                   *tested*
         if (mem[ bp+2 + b ] == 0) {
           mem[ bp+2 + a ] = 1;
         }
@@ -275,13 +275,13 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == oppCode ) {			// 21 opposite
+      else if ( op == oppCode ) {			// 21 opposite              *tested*
          mem[ bp+2 + a ] = - mem[ bp+2 + b ];
       }
-      else if ( op == litCode ) {			// 22 literal
+      else if ( op == litCode ) {			// 22 literal               *tested*
          mem[ bp+2 + a ] = b;
       }
-      else if ( op == copyCode ) {			// 23 copy
+      else if ( op == copyCode ) {			// 23 copy                  *tested*
          mem[ bp+2 + a ] = mem[ bp+2 + b ];
       }
       else if ( op == getCode ) {			// 24 get

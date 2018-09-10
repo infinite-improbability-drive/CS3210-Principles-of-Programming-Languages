@@ -174,15 +174,15 @@ public class VPL
           rip = ip;
           rbp = bp;
           bp = sp;
-          sp=sp+2+numPassed;
-          ip=a;
+          sp = sp+2+numPassed;
+          ip = a;
           numPassed=0;
       }
       else if ( op == passCode ) {          // 3 pass
           mem[ sp + 2 + numPassed]= a;
           numPassed++;
       }
-      else if ( op == allocCode ) {			// 4 locals
+      else if ( op == allocCode ) {			// 4 locals  *tested*
          sp = sp + a;
       }
       else if ( op == returnCode) {			// 5 return
@@ -204,19 +204,19 @@ public class VPL
 		    ip++;
 	     }
       }
-      else if ( op == addCode ) {			// 9 add
+      else if ( op == addCode ) {			// 9 add            *tested*
         mem[ bp+2 + a ] = mem[ bp+2 + b ] + mem[ bp+2 + c ];
       }
-      else if ( op == subCode ) {			// 10 subtract
+      else if ( op == subCode ) {			// 10 subtract      *tested*
         mem[ bp+2 + a ] = mem[ bp+2 + b ] - mem[ bp+2 + c ];
       }
-      else if ( op == multCode ) {			// 11 multiply
+      else if ( op == multCode ) {			// 11 multiply      *tested*
         mem[ bp+2 + a ] = mem[ bp+2 + b ] * mem[ bp+2 + c ];
       }
-      else if ( op == divCode ) {			// 12 divide
+      else if ( op == divCode ) {			// 12 divide        *tested*
         mem[ bp+2 + a ] = mem[ bp+2 + b ] / mem[ bp+2 + c ];
       }
-      else if ( op == remCode ) {			// 13 remainder
+      else if ( op == remCode ) {			// 13 remainder     *tested*
         mem[ bp+2 + a ] = mem[ bp+2 + b ] % mem[ bp+2 + c ];
       }
       else if ( op == equalCode ) {			// 14 equal
@@ -294,12 +294,9 @@ public class VPL
         System.out.println("Program End");
         System.exit(1);
       }
-      else if ( op == inputCode ) {			// 27 input
+      else if ( op == inputCode ) {			// 27 input         *tested* - no fancy error checking here
          System.out.print("? ");
-//         while (keys.hasNextInt()) {
-//             mem[ bp+2 + a ] = keys.nextInt();
-//         }
-        mem[ bp+2 + a ] = keys.nextInt();
+         mem[ bp+2 + a ] = keys.nextInt();
       }
       else if ( op == outputCode ) {		// 28 output
         System.out.println(mem[ bp+2 + a ]);

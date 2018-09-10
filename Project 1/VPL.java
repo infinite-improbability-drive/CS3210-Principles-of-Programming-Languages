@@ -1,3 +1,9 @@
+
+// CS3210 Project 01
+// Created by: Nick Barnes, Heather Minke, Peter Perez, John Samson, John Sanders
+// Date Created: 09/06/2018
+// Date Modified: 09/09/2018
+
 import java.io.*;
 import java.util.*;
 
@@ -176,13 +182,13 @@ public class VPL
           bp = sp;
           sp = sp+2+numPassed;
           ip = a;
-          numPassed=0;
+          numPassed = 0;
       }
       else if ( op == passCode ) {          // 3 pass
           mem[ sp + 2 + numPassed]= a;
           numPassed++;
       }
-      else if ( op == allocCode ) {			// 4 locals         *tested*
+      else if ( op == allocCode ) {			// 4 locals                 *tested*
          sp = sp + a;
       }
       else if ( op == returnCode) {			// 5 return
@@ -204,22 +210,22 @@ public class VPL
 		    ip++;
 	     }
       }
-      else if ( op == addCode ) {			// 9 add            *tested*
+      else if ( op == addCode ) {			// 9 add                    *tested*
         mem[ bp+2 + a ] = mem[ bp+2 + b ] + mem[ bp+2 + c ];
       }
-      else if ( op == subCode ) {			// 10 subtract      *tested*
+      else if ( op == subCode ) {			// 10 subtract              *tested*
         mem[ bp+2 + a ] = mem[ bp+2 + b ] - mem[ bp+2 + c ];
       }
-      else if ( op == multCode ) {			// 11 multiply      *tested*
+      else if ( op == multCode ) {			// 11 multiply              *tested*
         mem[ bp+2 + a ] = mem[ bp+2 + b ] * mem[ bp+2 + c ];
       }
-      else if ( op == divCode ) {			// 12 divide        *tested*
+      else if ( op == divCode ) {			// 12 divide                *tested*
         mem[ bp+2 + a ] = mem[ bp+2 + b ] / mem[ bp+2 + c ];
       }
-      else if ( op == remCode ) {			// 13 remainder     *tested*
+      else if ( op == remCode ) {			// 13 remainder             *tested*
         mem[ bp+2 + a ] = mem[ bp+2 + b ] % mem[ bp+2 + c ];
       }
-      else if ( op == equalCode ) {			// 14 equal         *tested*
+      else if ( op == equalCode ) {			// 14 equal                 *tested*
         if (mem[ bp+2 + b ] == mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -227,7 +233,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == notEqualCode ) {		// 15 not equal     *tested*
+      else if ( op == notEqualCode ) {		// 15 not equal             *tested*
         if (mem[ bp+2 + b ] != mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -235,7 +241,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == lessCode ) {			// 16 less than     *tested*
+      else if ( op == lessCode ) {			// 16 less than             *tested*
         if (mem[ bp+2 + b ] < mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -290,11 +296,11 @@ public class VPL
       else if ( op == putCode ) {			// 25 put
           mem[ mem[ bp+2 + a ] + mem[ bp+2 + b ] ] = mem[ bp+2 + c ];
       }
-      else if ( op == haltCode ) {			// 26 halt
+      else if ( op == haltCode ) {			// 26 halt                  *tested*
         System.out.println("Program End");
         System.exit(1);
       }
-      else if ( op == inputCode ) {			// 27 input         *tested* - no fancy error checking here
+      else if ( op == inputCode ) {			// 27 input                 *tested* - no fancy error checking here
          System.out.print("? ");
           try {
               mem[ bp+2 + a ] = keys.nextInt();
@@ -304,21 +310,21 @@ public class VPL
                 System.out.println("Error - invalid input");
           }
       }
-      else if ( op == outputCode ) {		// 28 output
+      else if ( op == outputCode ) {		// 28 output                *tested*
         System.out.println(mem[ bp+2 + a ]);
       }
-      else if ( op == newlineCode ) {		// 29 newline
+      else if ( op == newlineCode ) {		// 29 newline               *tested*
         System.out.println();
       }
-      else if ( op == symbolCode ) {		// 30 symbol
-          if (( mem[ bp+2 + a] >= 32 ) && ( mem[ bp+2 + a] <= 126 )) {
-              System.out.print((char) mem[ bp+2 + a ]);
+      else if ( op == symbolCode ) {		// 30 symbol                *tested*
+          if (( mem[ bp+2 + a ] >= 32 ) && ( mem[ bp+2 + a ] <= 126 )) {
+              System.out.println((char) mem[ bp+2 + a ]);
           }
       }
-      else if ( op == newCode ) {			// 31 new
+      else if ( op == newCode ) {			// 31 new                   *tested*
         int m = mem[ bp+2 + b ];
         hp = hp - m;
-        mem[ bp+2 + a] = hp;
+        mem[ bp+2 + a ] = hp;
 
       }
       else if ( op == allocGlobalCode ) { 	// 32 allocate global space
@@ -327,10 +333,10 @@ public class VPL
         sp = bp + 2;
       }
       else if ( op == toGlobalCode ) {		// 33 copy to global
-        mem[ gp + a ] = mem[ bp+2 + b];
+        mem[ gp + a ] = mem[ bp+2 + b ];
       }
       else if ( op == fromGlobalCode ) { 	// 34 copy from global
-        mem[ bp+2 + a] = mem[ gp + b];
+        mem[ bp+2 + a ] = mem[ gp + b ];
       }
       else if ( op == debugCode ) {			// 35 debug
 

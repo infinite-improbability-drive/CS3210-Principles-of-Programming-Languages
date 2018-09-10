@@ -296,9 +296,10 @@ public class VPL
       }
       else if ( op == inputCode ) {			// 27 input
          System.out.print("? ");
-         while (keys.hasNextInt()) {
-             mem[ bp+2 + a ] = keys.nextInt();
-         }
+//         while (keys.hasNextInt()) {
+//             mem[ bp+2 + a ] = keys.nextInt();
+//         }
+        mem[ bp+2 + a ] = keys.nextInt();
       }
       else if ( op == outputCode ) {		// 28 output
         System.out.println(mem[ bp+2 + a ]);

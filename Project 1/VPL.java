@@ -13,11 +13,14 @@ public class VPL
 
     public static void main(String[] args) throws Exception {
 
+<<<<<<< HEAD
         keys = new Scanner( System.in );
 
         if( args.length != 2 ) {
             System.out.println("Usage: java VPL <vpl program> <memory size>" );
             System.exit(1);
+=======
+>>>>>>> Project_01_dev
         }
 
         fileName = args[0];
@@ -100,6 +103,7 @@ public class VPL
                     index = labels.get(n).second;
             mem[ holes.get(m).first ] = index;
         }
+<<<<<<< HEAD
 
         System.out.println("after replacing labels:");
         showMem( 0, k-1 );
@@ -406,6 +410,8 @@ public class VPL
     // after the label, which always comes immediately after
     // the opcode
     private static int numArgs( int opcode )
+=======
+>>>>>>> Project_01_dev
     {
         // highlight specially behaving operations
         if( opcode == labelCode ) 		  return 1;  // not used

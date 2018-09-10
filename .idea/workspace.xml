@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a84e6708-1ce0-47e7-9a72-e46a603b91d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 1/VPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/VPL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 1/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/test1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 1/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/test2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/test2.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,8 +61,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="727" />
-          <entry key="PLAIN_TEXT" value="348" />
+          <entry key="JAVA" value="853" />
+          <entry key="PLAIN_TEXT" value="375" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -72,8 +72,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="727" />
-          <entry key="txt" value="348" />
+          <entry key="java" value="853" />
+          <entry key="txt" value="375" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project 1/VPL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="215" column="72" selection-start-line="215" selection-start-column="72" selection-end-line="215" selection-end-column="72" />
+            <state relative-caret-position="364">
+              <caret line="261" column="73" selection-start-line="261" selection-start-column="73" selection-end-line="261" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -557,8 +557,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project 1/VPL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="215" column="72" selection-start-line="215" selection-start-column="72" selection-end-line="215" selection-end-column="72" />
+        <state relative-caret-position="364">
+          <caret line="261" column="73" selection-start-line="261" selection-start-column="73" selection-end-line="261" selection-end-column="73" />
         </state>
       </provider>
     </entry>

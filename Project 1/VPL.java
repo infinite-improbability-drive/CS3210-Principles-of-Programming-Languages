@@ -182,7 +182,7 @@ public class VPL
           mem[ sp + 2 + numPassed]= a;
           numPassed++;
       }
-      else if ( op == allocCode ) {			// 4 locals  *tested*
+      else if ( op == allocCode ) {			// 4 locals         *tested*
          sp = sp + a;
       }
       else if ( op == returnCode) {			// 5 return
@@ -219,7 +219,7 @@ public class VPL
       else if ( op == remCode ) {			// 13 remainder     *tested*
         mem[ bp+2 + a ] = mem[ bp+2 + b ] % mem[ bp+2 + c ];
       }
-      else if ( op == equalCode ) {			// 14 equal
+      else if ( op == equalCode ) {			// 14 equal         *tested*
         if (mem[ bp+2 + b ] == mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -227,7 +227,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == notEqualCode ) {		// 15 not equal
+      else if ( op == notEqualCode ) {		// 15 not equal     *tested*
         if (mem[ bp+2 + b ] != mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -235,7 +235,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == lessCode ) {			// 16 less than
+      else if ( op == lessCode ) {			// 16 less than     *tested*
         if (mem[ bp+2 + b ] < mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -243,7 +243,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == lessEqualCode ) {		// 17 less than or equal
+      else if ( op == lessEqualCode ) {		// 17 less than or equal    *tested*
         if (mem[ bp+2 + b ] <= mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -251,7 +251,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == andCode ) {			// 18 and 
+      else if ( op == andCode ) {			// 18 and                   *tested*
         if ((mem[ bp+2 + b ] == 1) && (mem[ bp+2 + c ] == 1)) {
           mem[ bp+2 + a ] = 1;
         }
@@ -259,7 +259,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == orCode ) {			// 19 or
+      else if ( op == orCode ) {			// 19 or                    *tested*
         if ((mem[ bp+2 + b ] == 1) || (mem[ bp+2 + c ] == 1)) {
           mem[ bp+2 + a ] = 1;
         }
@@ -296,7 +296,13 @@ public class VPL
       }
       else if ( op == inputCode ) {			// 27 input         *tested* - no fancy error checking here
          System.out.print("? ");
-         mem[ bp+2 + a ] = keys.nextInt();
+          try {
+              mem[ bp+2 + a ] = keys.nextInt();
+          }
+
+          catch (InputMismatchException e) {
+                System.out.println("Error - invalid input");
+          }
       }
       else if ( op == outputCode ) {		// 28 output
         System.out.println(mem[ bp+2 + a ]);

@@ -177,7 +177,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Project 1 test4">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -205,10 +205,91 @@
       </Profilers>
       <method />
     </configuration>
-    <configuration name="Project 1" type="Application" factoryName="Application">
+    <configuration name="Project 1 ex1a" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="ex1a.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 ex1b" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="ex1b.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 ex1c" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="ex1c.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 ex1d" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="ex1d.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 ex2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="ex2.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 ex3" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="ex3.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 test1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="VPL" />
       <module name="CS3210-Principles-of-Programming-Languages" />
       <option name="PROGRAM_PARAMETERS" value="test1.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 test2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="test2.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 test3" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="test3.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 test4" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="test4.txt 10000" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -264,6 +345,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Project 1 ex1a" />
+      <item itemvalue="Application.Project 1 ex1b" />
+      <item itemvalue="Application.Project 1 ex1c" />
+      <item itemvalue="Application.Project 1 ex1d" />
+      <item itemvalue="Application.Project 1 ex2" />
+      <item itemvalue="Application.Project 1 ex3" />
+      <item itemvalue="Application.Project 1 test1" />
+      <item itemvalue="Application.Project 1 test2" />
+      <item itemvalue="Application.Project 1 test3" />
+      <item itemvalue="Application.Project 1 test4" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />

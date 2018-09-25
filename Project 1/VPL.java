@@ -176,7 +176,7 @@ public class VPL
 
       // put your work right here!
 
-      if ( op == callCode ) {             // 2 call                     *mostly tested*
+      if ( op == callCode ) {             // 2 call                     *tested*
           mem[ sp ] = ip;
           mem[ sp + 1 ] = bp;
           bp = sp;
@@ -191,52 +191,49 @@ public class VPL
       else if ( op == allocCode ) {			// 4 locals                 *tested*
           sp = sp + a;
       }
-      else if ( op == returnCode) {			// 5 return                 *mostly tested*
+      else if ( op == returnCode) {			// 5 return                 *tested*
           rv = mem [ bp + 2 + a ];
           sp = bp;
           ip = mem[ bp ];
           bp = mem[ bp + 1 ];
       }
-      else if ( op == getRetvalCode ) {		// 6 get retval
+      else if ( op == getRetvalCode ) {		// 6 get retval             *tested*
          mem[ bp + 2 + a ] = rv;
       }
-      else if ( op == jumpCode ) {			// 7 jump
+      else if ( op == jumpCode ) {			// 7 jump                   *tested*
          ip = a;
       }
-      else if ( op == condJumpCode ) {		// 8 cond
-         if ( mem[ a ] != 0 ) {
-		    ip = b;
-	     }
-         else {
-		    ip++;
+      else if ( op == condJumpCode ) {		// 8 cond                   *tested*
+         if ( mem[ bp + 2 + b ] != 0 ) {
+		    ip = a;
 	     }
       }
       else if ( op == addCode ) {			// 9 add                    *tested*
-        mem[ bp+2 + a ] = mem[ bp+2 + b ] + mem[ bp+2 + c ];
+        mem[ bp + 2 + a ] = mem[ bp + 2 + b ] + mem[ bp + 2 + c ];
       }
       else if ( op == subCode ) {			// 10 subtract              *tested*
-        mem[ bp+2 + a ] = mem[ bp+2 + b ] - mem[ bp+2 + c ];
+        mem[ bp + 2 + a ] = mem[ bp + 2 + b ] - mem[ bp + 2 + c ];
       }
       else if ( op == multCode ) {			// 11 multiply              *tested*
-        mem[ bp+2 + a ] = mem[ bp+2 + b ] * mem[ bp+2 + c ];
+        mem[ bp + 2 + a ] = mem[ bp + 2 + b ] * mem[ bp + 2 + c ];
       }
       else if ( op == divCode ) {			// 12 divide                *tested*
-        mem[ bp+2 + a ] = mem[ bp+2 + b ] / mem[ bp+2 + c ];
+        mem[ bp + 2 + a ] = mem[ bp + 2 + b ] / mem[ bp + 2 + c ];
       }
       else if ( op == remCode ) {			// 13 remainder             *tested*
-        mem[ bp+2 + a ] = mem[ bp+2 + b ] % mem[ bp+2 + c ];
+        mem[ bp + 2 + a ] = mem[ bp + 2 + b ] % mem[ bp + 2 + c ];
       }
       else if ( op == equalCode ) {			// 14 equal                 *tested*
-        if (mem[ bp+2 + b ] == mem[ bp+2 + c ]) {
-          mem[ bp+2 + a ] = 1;
+        if (mem[ bp + 2 + b ] == mem[ bp + 2 + c ]) {
+          mem[ bp + 2 + a ] = 1;
         }
         else {
-          mem[ bp+2 + a ] = 0;
+          mem[ bp + 2 + a ] = 0;
         }
       }
       else if ( op == notEqualCode ) {		// 15 not equal             *tested*
-        if (mem[ bp+2 + b ] != mem[ bp+2 + c ]) {
-          mem[ bp+2 + a ] = 1;
+        if (mem[ bp + 2 + b ] != mem[ bp + 2 + c ]) {
+          mem[ bp + 2 + a ] = 1;
         }
         else {
           mem[ bp+2 + a ] = 0;

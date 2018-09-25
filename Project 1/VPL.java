@@ -1,3 +1,9 @@
+
+// CS3210 Project 01
+// Created by: Nick Barnes, Heather Minke, Peter Perez, John Samson, John Sanders
+// Date Created: 09/06/2018
+// Date Modified: 09/09/2018
+
 import java.io.*;
 import java.util.*;
 
@@ -8,7 +14,7 @@ public class VPL
 
   static int max;
   static int[] mem;
-  static int ip, bp, sp, rv, hp, numPassed, gp;
+  static int ip, bp, sp, rv, hp, numPassed, gp, rip, rbp;
   static int step;
 
   public static void main(String[] args) throws Exception {
@@ -88,6 +94,7 @@ public class VPL
     //System.out.println("after first scan:");
     //showMem( 0, k-1 );
 
+    // replace labels
     // fill in all the holes:
     int index;
     for( int m=0; m<holes.size(); ++m )
@@ -128,11 +135,11 @@ public class VPL
 
     do {
 
-/*    // show details of current step
+      // show details of current step
       System.out.println("--------------------------");
       System.out.println("Step of execution with IP = " + ip + " opcode: " +
           mem[ip] + 
-         " bp = " + bp + " sp = " + sp + " hp = " + hp + " rv = " + rv );
+         " bp = " + bp + " sp = " + sp + " hp = " + hp + " rv = " + rv + " gp = " + gp );
       System.out.println(" chunk of code: " +  mem[ip] + " " +
                             mem[ip+1] + " " + mem[ip+2] + " " + mem[ip+3] );
       System.out.println("--------------------------");
@@ -140,7 +147,7 @@ public class VPL
       showMem( codeEnd+1, sp+3 );
       System.out.println("hit <enter> to go on" );
       keys.nextLine();
-*/
+
 
       oldIp = ip;
 
@@ -169,23 +176,32 @@ public class VPL
 
       // put your work right here!
 
-      if ( op == callCode ) {				// 2 call
-         mem[ bp+2 + a ] = - mem[ bp+2 + b ];
+      if ( op == callCode ) {             // 2 call                     *mostly tested*
+          mem[ sp ] = ip;
+          mem[ sp + 1 ] = bp;
+          bp = sp;
+          sp = sp + 2 + numPassed;
+          numPassed = 0;
+          ip = a;
       }
-      else if ( op == passCode ) {			// 3 pass
-
+      else if ( op == passCode ) {          // 3 pass                   *tested*
+          mem[ sp + 2 + numPassed ] = mem[ bp + 2 + a];
+          numPassed++;
       }
-      else if ( op == allocCode ) {			// 4 locals
-         sp = sp + a;
+      else if ( op == allocCode ) {			// 4 locals                 *tested*
+          sp = sp + a;
       }
-      else if ( op == returnCode) {			// 5 return
-
+      else if ( op == returnCode) {			// 5 return                 *mostly tested*
+          rv = mem [ bp + 2 + a ];
+          sp = bp;
+          ip = mem[ bp ];
+          bp = mem[ bp + 1 ];
       }
       else if ( op == getRetvalCode ) {		// 6 get retval
-         mem[ a ] = rv;
+         mem[ bp + 2 + a ] = rv;
       }
       else if ( op == jumpCode ) {			// 7 jump
-
+         ip = a;
       }
       else if ( op == condJumpCode ) {		// 8 cond
          if ( mem[ a ] != 0 ) {
@@ -195,83 +211,132 @@ public class VPL
 		    ip++;
 	     }
       }
-      else if ( op == addCode ) {			// 9 add
-	     mem[ a ] = mem[ b ] + mem[ c ];
+      else if ( op == addCode ) {			// 9 add                    *tested*
+        mem[ bp+2 + a ] = mem[ bp+2 + b ] + mem[ bp+2 + c ];
       }
-      else if ( op == subCode ) {			// 10 subtract
-
+      else if ( op == subCode ) {			// 10 subtract              *tested*
+        mem[ bp+2 + a ] = mem[ bp+2 + b ] - mem[ bp+2 + c ];
       }
-      else if ( op == multCode ) {			// 11 multiply
-
+      else if ( op == multCode ) {			// 11 multiply              *tested*
+        mem[ bp+2 + a ] = mem[ bp+2 + b ] * mem[ bp+2 + c ];
       }
-      else if ( op == divCode ) {			// 12 divide
-
+      else if ( op == divCode ) {			// 12 divide                *tested*
+        mem[ bp+2 + a ] = mem[ bp+2 + b ] / mem[ bp+2 + c ];
       }
-      else if ( op == remCode ) {			// 13 remainder
-
+      else if ( op == remCode ) {			// 13 remainder             *tested*
+        mem[ bp+2 + a ] = mem[ bp+2 + b ] % mem[ bp+2 + c ];
       }
-      else if ( op == equalCode ) {			// 14 equal
-
+      else if ( op == equalCode ) {			// 14 equal                 *tested*
+        if (mem[ bp+2 + b ] == mem[ bp+2 + c ]) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
-      else if ( op == notEqualCode ) {		// 15 not equal
-
+      else if ( op == notEqualCode ) {		// 15 not equal             *tested*
+        if (mem[ bp+2 + b ] != mem[ bp+2 + c ]) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
-      else if ( op == lessCode ) {			// 16 less than
-
+      else if ( op == lessCode ) {			// 16 less than             *tested*
+        if (mem[ bp+2 + b ] < mem[ bp+2 + c ]) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
-      else if ( op == lessEqualCode ) {		// 17 less than or equal
-
+      else if ( op == lessEqualCode ) {		// 17 less than or equal    *tested*
+        if (mem[ bp+2 + b ] <= mem[ bp+2 + c ]) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
-      else if ( op == andCode ) {			// 18 and 
-
+      else if ( op == andCode ) {			// 18 and                   *tested*
+        if ((mem[ bp+2 + b ] == 1) && (mem[ bp+2 + c ] == 1)) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
-      else if ( op == orCode ) {			// 19 or
-
+      else if ( op == orCode ) {			// 19 or                    *tested*
+        if ((mem[ bp+2 + b ] == 1) || (mem[ bp+2 + c ] == 1)) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
-      else if ( op == notCode ) {			// 20 not
-
+      else if ( op == notCode ) {			// 20 not                   *tested*
+        if (mem[ bp+2 + b ] == 0) {
+          mem[ bp+2 + a ] = 1;
+        }
+        else {
+          mem[ bp+2 + a ] = 0;
+        }
       }
-      else if ( op == oppCode ) {			// 21 opposite
+      else if ( op == oppCode ) {			// 21 opposite              *tested*
          mem[ bp+2 + a ] = - mem[ bp+2 + b ];
       }
-      else if ( op == litCode ) {			// 22 literal
-
+      else if ( op == litCode ) {			// 22 literal               *tested*
+         mem[ bp+2 + a ] = b;
       }
-      else if ( op == copyCode ) {			// 23 copy
-
+      else if ( op == copyCode ) {			// 23 copy                  *tested*
+         mem[ bp+2 + a ] = mem[ bp+2 + b ];
       }
       else if ( op == getCode ) {			// 24 get
-
+         mem[ bp+2 + a ] = mem[ mem[ bp+2 + b ] + mem[ bp+2 + c ] ];
       }
       else if ( op == putCode ) {			// 25 put
-
+          mem[ mem[ bp+2 + a ] + mem[ bp+2 + b ] ] = mem[ bp+2 + c ];
       }
-      else if ( op == haltCode ) {			// 26 halt
-
+      else if ( op == haltCode ) {			// 26 halt                  *tested*
+        System.exit(1);
       }
-      else if ( op == inputCode ) {			// 27 input
+      else if ( op == inputCode ) {			// 27 input                 *tested* - no fancy error checking here
+         System.out.print("? ");
+          try {
+              mem[ bp+2 + a ] = keys.nextInt();
+          }
 
+          catch (InputMismatchException e) {
+                System.out.println("Error - invalid input");
+          }
       }
-      else if ( op == outputCode ) {		// 28 output
-
+      else if ( op == outputCode ) {		// 28 output                *tested*
+        System.out.println(mem[ bp+2 + a ]);
       }
-      else if ( op == newlineCode ) {		// 29 newline
-
+      else if ( op == newlineCode ) {		// 29 newline               *tested*
+        System.out.println();
       }
-      else if ( op == symbolCode ) {		// 30 symbol
-
+      else if ( op == symbolCode ) {		// 30 symbol                *tested*
+          if (( mem[ bp+2 + a ] >= 32 ) && ( mem[ bp+2 + a ] <= 126 )) {
+              System.out.println((char) mem[ bp+2 + a ]);
+          }
       }
-      else if ( op == newCode ) {			// 31 new
+      else if ( op == newCode ) {			// 31 new                   *tested*
+        int m = mem[ bp+2 + b ];
+        hp = hp - m;
+        mem[ bp+2 + a ] = hp;
 
       }
       else if ( op == allocGlobalCode ) { 	// 32 allocate global space
-
+        gp = codeEnd + 1;
+        bp = codeEnd + 1 + a;
+        sp = bp + 2;
       }
       else if ( op == toGlobalCode ) {		// 33 copy to global
-
+        mem[ gp + a ] = mem[ bp+2 + b ];
       }
       else if ( op == fromGlobalCode ) { 	// 34 copy from global
-
+        mem[ bp+2 + a ] = mem[ gp + b ];
       }
       else if ( op == debugCode ) {			// 35 debug
 

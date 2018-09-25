@@ -176,28 +176,29 @@ public class VPL
 
       // put your work right here!
 
-      if ( op == callCode ) {             // 2 call
-          rip = ip;
-          rbp = bp;
+      if ( op == callCode ) {             // 2 call                     *mostly tested*
+          mem[ sp ] = ip;
+          mem[ sp + 1 ] = bp;
           bp = sp;
           sp = sp + 2 + numPassed;
-          ip = a;
           numPassed = 0;
+          ip = a;
       }
-      else if ( op == passCode ) {          // 3 pass
-          mem[ sp + 2 + numPassed]= a;
+      else if ( op == passCode ) {          // 3 pass                   *tested*
+          mem[ sp + 2 + numPassed ] = mem[ bp + 2 + a];
           numPassed++;
       }
       else if ( op == allocCode ) {			// 4 locals                 *tested*
-         sp = sp + a;
+          sp = sp + a;
       }
-      else if ( op == returnCode) {			// 5 return
-          ip = mem[rip];
-          bp = mem[rbp];
-          sp = bp + 2;
+      else if ( op == returnCode) {			// 5 return                 *mostly tested*
+          rv = mem [ bp + 2 + a ];
+          sp = bp;
+          ip = mem[ bp ];
+          bp = mem[ bp + 1 ];
       }
       else if ( op == getRetvalCode ) {		// 6 get retval
-         mem[ a ] = rv;
+         mem[ bp + 2 + a ] = rv;
       }
       else if ( op == jumpCode ) {			// 7 jump
          ip = a;

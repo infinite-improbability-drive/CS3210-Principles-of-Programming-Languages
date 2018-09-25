@@ -180,7 +180,7 @@ public class VPL
           rip = ip;
           rbp = bp;
           bp = sp;
-          sp = sp+2+numPassed;
+          sp = sp + 2 + numPassed;
           ip = a;
           numPassed = 0;
       }
@@ -297,7 +297,6 @@ public class VPL
           mem[ mem[ bp+2 + a ] + mem[ bp+2 + b ] ] = mem[ bp+2 + c ];
       }
       else if ( op == haltCode ) {			// 26 halt                  *tested*
-        System.out.println("Program End");
         System.exit(1);
       }
       else if ( op == inputCode ) {			// 27 input                 *tested* - no fancy error checking here

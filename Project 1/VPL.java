@@ -1,8 +1,9 @@
 
-// CS3210 Project 01
+// CS3210 Project 1
+// Metropolitan State University of Denver
 // Created by: Nick Barnes, Heather Minke, Peter Perez, John Samson, John Sanders
 // Date Created: 09/06/2018
-// Date Modified: 09/09/2018
+// Date Modified: 09/26/2018
 
 import java.io.*;
 import java.util.*;
@@ -178,6 +179,7 @@ public class VPL
       // put your work right here!
 
       if ( op == callCode ) {               // 2 call                    *tested*
+      if ( op == callCode ) {               // 2 call
         mem[ sp ] = ip;
         mem[ sp + 1 ] = bp;
         bp = sp;
@@ -193,6 +195,14 @@ public class VPL
         sp = sp + a;
       }
       else if ( op == returnCode) {			// 5 return                 *tested*
+      else if ( op == passCode ) {          // 3 pass
+        mem[ sp + 2 + numPassed ] = mem[ bp+2 + a];
+        numPassed++;
+      }
+      else if ( op == allocCode ) {			// 4 locals
+        sp = sp + a;
+      }
+      else if ( op == returnCode) {			// 5 return
         rv = mem [ bp+2 + a ];
         sp = bp;
         ip = mem[ bp ];
@@ -205,26 +215,33 @@ public class VPL
         ip = a;
       }
       else if ( op == condJumpCode ) {		// 8 cond                   *tested*
+      else if ( op == getRetvalCode ) {		// 6 get retval
+        mem[ bp+2 + a ] = rv;
+      }
+      else if ( op == jumpCode ) {			// 7 jump
+        ip = a;
+      }
+      else if ( op == condJumpCode ) {		// 8 cond
         if ( mem[ bp+2 + b ] != 0 ) {
           ip = a;
         }
       }
-      else if ( op == addCode ) {			// 9 add                    *tested*
+      else if ( op == addCode ) {			// 9 add
         mem[ bp+2 + a ] = mem[ bp+2 + b ] + mem[ bp+2 + c ];
       }
-      else if ( op == subCode ) {			// 10 subtract              *tested*
+      else if ( op == subCode ) {			// 10 subtract
         mem[ bp+2 + a ] = mem[ bp+2 + b ] - mem[ bp+2 + c ];
       }
-      else if ( op == multCode ) {			// 11 multiply              *tested*
+      else if ( op == multCode ) {			// 11 multiply
         mem[ bp+2 + a ] = mem[ bp+2 + b ] * mem[ bp+2 + c ];
       }
-      else if ( op == divCode ) {			// 12 divide                *tested*
+      else if ( op == divCode ) {			// 12 divide
         mem[ bp+2 + a ] = mem[ bp+2 + b ] / mem[ bp+2 + c ];
       }
-      else if ( op == remCode ) {			// 13 remainder             *tested*
+      else if ( op == remCode ) {			// 13 remainder
         mem[ bp+2 + a ] = mem[ bp+2 + b ] % mem[ bp+2 + c ];
       }
-      else if ( op == equalCode ) {			// 14 equal                 *tested*
+      else if ( op == equalCode ) {			// 14 equal
         if (mem[ bp+2 + b ] == mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -232,7 +249,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == notEqualCode ) {		// 15 not equal             *tested*
+      else if ( op == notEqualCode ) {		// 15 not equal
         if (mem[ bp+2 + b ] != mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -240,7 +257,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == lessCode ) {			// 16 less than             *tested*
+      else if ( op == lessCode ) {			// 16 less than
         if (mem[ bp+2 + b ] < mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -248,7 +265,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == lessEqualCode ) {		// 17 less than or equal    *tested*
+      else if ( op == lessEqualCode ) {		// 17 less than or equal
         if (mem[ bp+2 + b ] <= mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -256,7 +273,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == andCode ) {			// 18 and                   *tested*
+      else if ( op == andCode ) {			// 18 and
         if ((mem[ bp+2 + b ] == 1) && (mem[ bp+2 + c ] == 1)) {
           mem[ bp+2 + a ] = 1;
         }
@@ -264,7 +281,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == orCode ) {			// 19 or                    *tested*
+      else if ( op == orCode ) {			// 19 or
         if ((mem[ bp+2 + b ] == 1) || (mem[ bp+2 + c ] == 1)) {
           mem[ bp+2 + a ] = 1;
         }
@@ -272,7 +289,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == notCode ) {			// 20 not                   *tested*
+      else if ( op == notCode ) {			// 20 not
         if (mem[ bp+2 + b ] == 0) {
           mem[ bp+2 + a ] = 1;
         }
@@ -287,6 +304,13 @@ public class VPL
         mem[ bp+2 + a ] = b;
       }
       else if ( op == copyCode ) {			// 23 copy                  *tested*
+      else if ( op == oppCode ) {			// 21 opposite
+        mem[ bp+2 + a ] = - mem[ bp+2 + b ];
+      }
+      else if ( op == litCode ) {			// 22 literal
+        mem[ bp+2 + a ] = b;
+      }
+      else if ( op == copyCode ) {			// 23 copy
         mem[ bp+2 + a ] = mem[ bp+2 + b ];
       }
       else if ( op == getCode ) {			// 24 get
@@ -295,10 +319,11 @@ public class VPL
       else if ( op == putCode ) {			// 25 put
         mem[ mem[ bp+2 + a ] + mem[ bp+2 + b ] ] = mem[ bp+2 + c ];
       }
-      else if ( op == haltCode ) {			// 26 halt                  *tested*
+      else if ( op == haltCode ) {			// 26 halt                  
         System.exit(1);
       }
       else if ( op == inputCode ) {			// 27 input                 *tested*
+      else if ( op == inputCode ) {			// 27 input                 
         System.out.print("? ");
         try {
           mem[ bp+2 + a ] = keys.nextInt();
@@ -307,18 +332,20 @@ public class VPL
           System.out.println("Error - invalid input");
         }
       }
-      else if ( op == outputCode ) {		// 28 output                *tested*
-        System.out.println(mem[ bp+2 + a ]);
+      else if ( op == outputCode ) {		// 28 output
+        System.out.print(mem[ bp+2 + a ]);
       }
-      else if ( op == newlineCode ) {		// 29 newline               *tested*
+      else if ( op == newlineCode ) {		// 29 newline
         System.out.println();
       }
       else if ( op == symbolCode ) {		// 30 symbol                *tested*
+      else if ( op == symbolCode ) {		// 30 symbol
+>>>>>>> Project_01_dev
         if (( mem[ bp+2 + a ] >= 32 ) && ( mem[ bp+2 + a ] <= 126 )) {
           System.out.println((char) mem[ bp+2 + a ]);
         }
       }
-      else if ( op == newCode ) {			// 31 new                   *tested*
+      else if ( op == newCode ) {			// 31 new
         int m = mem[ bp+2 + b ];
         hp = hp - m;
         mem[ bp+2 + a ] = hp;

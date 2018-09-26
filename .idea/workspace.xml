@@ -12,6 +12,10 @@
       <change beforePath="$PROJECT_DIR$/Project 1/ex3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/ex3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/ex1a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/ex1a.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 1/someUnitTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/someUnitTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/ex3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/ex3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/someUnitTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/someUnitTests.txt" afterDir="false" />
 >>>>>>> Project_01_dev
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -67,6 +71,7 @@
           <entry key="JAVA" value="1" />
           <entry key="PLAIN_TEXT" value="20" />
           <entry key="PLAIN_TEXT" value="37" />
+          <entry key="PLAIN_TEXT" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -79,6 +84,8 @@
           <entry key="PLAIN_TEXT" value="635" />
           <entry key="JAVA" value="1639" />
           <entry key="PLAIN_TEXT" value="888" />
+          <entry key="JAVA" value="1684" />
+          <entry key="PLAIN_TEXT" value="1508" />
 >>>>>>> Project_01_dev
         </counts>
       </usages-collector>
@@ -87,7 +94,7 @@
           <entry key="java" value="1" />
           <entry key="txt" value="20" />
           <entry key="someUnitTests" value="1" />
-          <entry key="txt" value="36" />
+          <entry key="txt" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -100,6 +107,8 @@
           <entry key="txt" value="635" />
           <entry key="java" value="1639" />
           <entry key="txt" value="888" />
+          <entry key="java" value="1684" />
+          <entry key="txt" value="1508" />
 >>>>>>> Project_01_dev
         </counts>
       </usages-collector>
@@ -128,6 +137,13 @@
               </folding>
             <state relative-caret-position="328">
               <caret line="198" column="29" lean-forward="true" selection-start-line="198" selection-start-column="29" selection-end-line="198" selection-end-column="29" />
+        <entry file="file://$PROJECT_DIR$/Project 1/VPL.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#31185#0" expanded="true" />
+              </folding>
 >>>>>>> Project_01_dev
             </state>
           </provider>
@@ -154,6 +170,10 @@
               <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="14" />
             <state relative-caret-position="-2490">
               <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <entry file="file://$PROJECT_DIR$/Project 1/someUnitTests.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -198,6 +218,8 @@
         <option value="$PROJECT_DIR$/Project 1/VPL.java" />
         <option value="$PROJECT_DIR$/Project 1/ex1c.txt" />
         <option value="$PROJECT_DIR$/Project 1/ex3.txt" />
+        <option value="$PROJECT_DIR$/Project 1/someUnitTests.txt" />
+        <option value="$PROJECT_DIR$/Project 1/VPL.java" />
       </list>
     </option>
   </component>
@@ -248,6 +270,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537846824058" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537944173048" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537948992596" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Project 1" />
+>>>>>>> Project_01_dev
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -365,6 +390,7 @@
       <option name="MAIN_CLASS_NAME" value="VPL" />
       <module name="CS3210-Principles-of-Programming-Languages" />
       <option name="PROGRAM_PARAMETERS" value="someUnitTests.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -463,8 +489,8 @@
       <item itemvalue="Application.Project 1 ex2" />
       <item itemvalue="Application.Project 1 ex3" />
       <item itemvalue="Application.Project 1 ex4" />
-      <item itemvalue="Application.Project 1 someUnitTests" />
       <item itemvalue="Application.Project 1 test1" />
+      <item itemvalue="Application.Project 1 someUnitTests" />
       <item itemvalue="Application.Project 1 test2" />
       <item itemvalue="Application.Project 1 test3" />
       <item itemvalue="Application.Project 1 test4" />
@@ -570,6 +596,14 @@
       <updated>1536553916971</updated>
     </task>
     <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="John #15; commenting someUnitTests.txt.">
+      <created>1537947360323</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1537947360323</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
 >>>>>>> Project_01_dev
     <servers />
   </component>
@@ -592,6 +626,9 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11940298" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24945295" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12153518" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Nl-Palette" order="3" />
@@ -604,6 +641,8 @@
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.48806942" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4041621" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4002169" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39868566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32968238" />
@@ -646,6 +685,9 @@
     <MESSAGE value="John^2+Heather #2, more testing" />
     <MESSAGE value="John^2+Heather #3, more more testing" />
     <option name="LAST_COMMIT_MESSAGE" value="John^2+Heather #3, more more testing" />
+>>>>>>> Project_01_dev
+    <MESSAGE value="John #15; commenting someUnitTests.txt." />
+    <option name="LAST_COMMIT_MESSAGE" value="John #15; commenting someUnitTests.txt." />
 >>>>>>> Project_01_dev
   </component>
   <component name="antWorkspaceConfiguration">
@@ -716,6 +758,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project 1/test4.txt">
+    <entry file="file://$PROJECT_DIR$/Project 1/ex1a.txt" />
+>>>>>>> Project_01_dev
     <entry file="file://$PROJECT_DIR$/Project 1/ex4.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -750,7 +794,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project 1/VPL.java">
+    <entry file="file://$PROJECT_DIR$/Project 1/someUnitTests" />
+    <entry file="file://$PROJECT_DIR$/Project 1/ex3.txt">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
         <state relative-caret-position="4859">
@@ -764,20 +809,29 @@
           </folding>
         <state relative-caret-position="328">
           <caret line="198" column="29" lean-forward="true" selection-start-line="198" selection-start-column="29" selection-end-line="198" selection-end-column="29" />
+        <state relative-caret-position="170">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+>>>>>>> Project_01_dev
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project 1/ex3.txt">
+    <entry file="file://$PROJECT_DIR$/Project 1/someUnitTests.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project 1/someUnitTests">
+    <entry file="file://$PROJECT_DIR$/Project 1/VPL.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-2490">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#31185#0" expanded="true" />
+          </folding>
 >>>>>>> Project_01_dev
         </state>
       </provider>

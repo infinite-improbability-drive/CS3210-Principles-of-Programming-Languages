@@ -1,8 +1,9 @@
 
-// CS3210 Project 01
+// CS3210 Project 1
+// Metropolitan State University of Denver
 // Created by: Nick Barnes, Heather Minke, Peter Perez, John Samson, John Sanders
 // Date Created: 09/06/2018
-// Date Modified: 09/09/2018
+// Date Modified: 09/26/2018
 
 import java.io.*;
 import java.util.*;

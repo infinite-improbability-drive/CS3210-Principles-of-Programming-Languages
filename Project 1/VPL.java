@@ -69,9 +69,9 @@ public class VPL
           else
           {// opcode actually gets stored
             mem[k] = opcode;  k++;
- 
+
             if( opcode == callCode || opcode == jumpCode ||
-                opcode == condJumpCode )
+                    opcode == condJumpCode )
             {// note the hole immediately after the opcode to be filled in later
               label = Integer.parseInt( st.nextToken() );
               mem[k] = label;  holes.add( new IntPair( k, label ) );
@@ -90,7 +90,7 @@ public class VPL
         }// have a token, so must be an instruction
       }// have a line
     }// loop to load code
-    
+
     //System.out.println("after first scan:");
     //showMem( 0, k-1 );
 
@@ -113,7 +113,7 @@ public class VPL
     // initialize registers:
     bp = k;  sp = k+2;  ip = 0;  rv = -1;  hp = max;
     numPassed = 0;
-    
+
     int codeEnd = bp-1;
 
     // System.out.println("Code is " );
@@ -139,7 +139,7 @@ public class VPL
       // show details of current step
       System.out.println("--------------------------");
       System.out.println("Step of execution with IP = " + ip + " opcode: " +
-          mem[ip] + 
+          mem[ip] +
          " bp = " + bp + " sp = " + sp + " hp = " + hp + " rv = " + rv + " gp = " + gp );
       System.out.println(" chunk of code: " +  mem[ip] + " " +
                             mem[ip+1] + " " + mem[ip+2] + " " + mem[ip+3] );
@@ -158,7 +158,7 @@ public class VPL
 
       // numArgs is wrong for these guys, need one more!
       if( op == callCode || op == jumpCode ||
-                op == condJumpCode )
+              op == condJumpCode )
       {
         actualNumArgs = numArgs( op ) + 1;
       }
@@ -171,60 +171,60 @@ public class VPL
       {  a = mem[ ip ];  ip++;  b = mem[ ip ]; ip++; }
       else if( actualNumArgs == 3 )
       {  a = mem[ ip ];  ip++;  b = mem[ ip ]; ip++; c = mem[ ip ]; ip++; }
- 
+
       // implement all operations here:
       // ********************************************
 
       // put your work right here!
 
-      if ( op == callCode ) {               // 2 call                    *tested*
-          mem[ sp ] = ip;
-          mem[ sp + 1 ] = bp;
-          bp = sp;
-          sp = sp + 2 + numPassed;
-          numPassed = 0;
+      if ( op == callCode ) {               // 2 call
+        mem[ sp ] = ip;
+        mem[ sp + 1 ] = bp;
+        bp = sp;
+        sp = sp + 2 + numPassed;
+        numPassed = 0;
+        ip = a;
+      }
+      else if ( op == passCode ) {          // 3 pass
+        mem[ sp + 2 + numPassed ] = mem[ bp+2 + a];
+        numPassed++;
+      }
+      else if ( op == allocCode ) {			// 4 locals
+        sp = sp + a;
+      }
+      else if ( op == returnCode) {			// 5 return
+        rv = mem [ bp+2 + a ];
+        sp = bp;
+        ip = mem[ bp ];
+        bp = mem[ bp + 1 ];
+      }
+      else if ( op == getRetvalCode ) {		// 6 get retval
+        mem[ bp+2 + a ] = rv;
+      }
+      else if ( op == jumpCode ) {			// 7 jump
+        ip = a;
+      }
+      else if ( op == condJumpCode ) {		// 8 cond
+        if ( mem[ bp+2 + b ] != 0 ) {
           ip = a;
+        }
       }
-      else if ( op == passCode ) {          // 3 pass                   *tested*
-          mem[ sp + 2 + numPassed ] = mem[ bp+2 + a];
-          numPassed++;
-      }
-      else if ( op == allocCode ) {			// 4 locals                 *tested*
-          sp = sp + a;
-      }
-      else if ( op == returnCode) {			// 5 return                 *tested*
-          rv = mem [ bp+2 + a ];
-          sp = bp;
-          ip = mem[ bp ];
-          bp = mem[ bp + 1 ];
-      }
-      else if ( op == getRetvalCode ) {		// 6 get retval             *tested*
-         mem[ bp+2 + a ] = rv;
-      }
-      else if ( op == jumpCode ) {			// 7 jump                   *tested*
-         ip = a;
-      }
-      else if ( op == condJumpCode ) {		// 8 cond                   *tested*
-         if ( mem[ bp+2 + b ] != 0 ) {
-		    ip = a;
-	     }
-      }
-      else if ( op == addCode ) {			// 9 add                    *tested*
+      else if ( op == addCode ) {			// 9 add
         mem[ bp+2 + a ] = mem[ bp+2 + b ] + mem[ bp+2 + c ];
       }
-      else if ( op == subCode ) {			// 10 subtract              *tested*
+      else if ( op == subCode ) {			// 10 subtract
         mem[ bp+2 + a ] = mem[ bp+2 + b ] - mem[ bp+2 + c ];
       }
-      else if ( op == multCode ) {			// 11 multiply              *tested*
+      else if ( op == multCode ) {			// 11 multiply
         mem[ bp+2 + a ] = mem[ bp+2 + b ] * mem[ bp+2 + c ];
       }
-      else if ( op == divCode ) {			// 12 divide                *tested*
+      else if ( op == divCode ) {			// 12 divide
         mem[ bp+2 + a ] = mem[ bp+2 + b ] / mem[ bp+2 + c ];
       }
-      else if ( op == remCode ) {			// 13 remainder             *tested*
+      else if ( op == remCode ) {			// 13 remainder
         mem[ bp+2 + a ] = mem[ bp+2 + b ] % mem[ bp+2 + c ];
       }
-      else if ( op == equalCode ) {			// 14 equal                 *tested*
+      else if ( op == equalCode ) {			// 14 equal
         if (mem[ bp+2 + b ] == mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -232,7 +232,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == notEqualCode ) {		// 15 not equal             *tested*
+      else if ( op == notEqualCode ) {		// 15 not equal
         if (mem[ bp+2 + b ] != mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -240,7 +240,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == lessCode ) {			// 16 less than             *tested*
+      else if ( op == lessCode ) {			// 16 less than
         if (mem[ bp+2 + b ] < mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -248,7 +248,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == lessEqualCode ) {		// 17 less than or equal    *tested*
+      else if ( op == lessEqualCode ) {		// 17 less than or equal
         if (mem[ bp+2 + b ] <= mem[ bp+2 + c ]) {
           mem[ bp+2 + a ] = 1;
         }
@@ -256,7 +256,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == andCode ) {			// 18 and                   *tested*
+      else if ( op == andCode ) {			// 18 and
         if ((mem[ bp+2 + b ] == 1) && (mem[ bp+2 + c ] == 1)) {
           mem[ bp+2 + a ] = 1;
         }
@@ -264,7 +264,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == orCode ) {			// 19 or                    *tested*
+      else if ( op == orCode ) {			// 19 or
         if ((mem[ bp+2 + b ] == 1) || (mem[ bp+2 + c ] == 1)) {
           mem[ bp+2 + a ] = 1;
         }
@@ -272,7 +272,7 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == notCode ) {			// 20 not                   *tested*
+      else if ( op == notCode ) {			// 20 not
         if (mem[ bp+2 + b ] == 0) {
           mem[ bp+2 + a ] = 1;
         }
@@ -280,45 +280,45 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == oppCode ) {			// 21 opposite              *tested*
-         mem[ bp+2 + a ] = - mem[ bp+2 + b ];
+      else if ( op == oppCode ) {			// 21 opposite
+        mem[ bp+2 + a ] = - mem[ bp+2 + b ];
       }
-      else if ( op == litCode ) {			// 22 literal               *tested*
-         mem[ bp+2 + a ] = b;
+      else if ( op == litCode ) {			// 22 literal
+        mem[ bp+2 + a ] = b;
       }
-      else if ( op == copyCode ) {			// 23 copy                  *tested*
-         mem[ bp+2 + a ] = mem[ bp+2 + b ];
+      else if ( op == copyCode ) {			// 23 copy
+        mem[ bp+2 + a ] = mem[ bp+2 + b ];
       }
       else if ( op == getCode ) {			// 24 get
-         mem[ bp+2 + a ] = mem[ mem[ bp+2 + b ] + mem[ bp+2 + c ] ];
+        mem[ bp+2 + a ] = mem[ mem[ bp+2 + b ] + mem[ bp+2 + c ] ];
       }
       else if ( op == putCode ) {			// 25 put
-          mem[ mem[ bp+2 + a ] + mem[ bp+2 + b ] ] = mem[ bp+2 + c ];
+        mem[ mem[ bp+2 + a ] + mem[ bp+2 + b ] ] = mem[ bp+2 + c ];
       }
-      else if ( op == haltCode ) {			// 26 halt                  *tested*
+      else if ( op == haltCode ) {			// 26 halt                  
         System.exit(1);
       }
-      else if ( op == inputCode ) {			// 27 input                 *tested*
-         System.out.print("? ");
-          try {
-              mem[ bp+2 + a ] = keys.nextInt();
-          }
-          catch (InputMismatchException e) {
-                System.out.println("Error - invalid input");
-          }
+      else if ( op == inputCode ) {			// 27 input                 
+        System.out.print("? ");
+        try {
+          mem[ bp+2 + a ] = keys.nextInt();
+        }
+        catch (InputMismatchException e) {
+          System.out.println("Error - invalid input");
+        }
       }
-      else if ( op == outputCode ) {		// 28 output                *tested*
-        System.out.println(mem[ bp+2 + a ]);
+      else if ( op == outputCode ) {		// 28 output
+        System.out.print(mem[ bp+2 + a ]);
       }
-      else if ( op == newlineCode ) {		// 29 newline               *tested*
+      else if ( op == newlineCode ) {		// 29 newline
         System.out.println();
       }
-      else if ( op == symbolCode ) {		// 30 symbol                *tested*
-          if (( mem[ bp+2 + a ] >= 32 ) && ( mem[ bp+2 + a ] <= 126 )) {
-              System.out.println((char) mem[ bp+2 + a ]);
-          }
+      else if ( op == symbolCode ) {		// 30 symbol
+        if (( mem[ bp+2 + a ] >= 32 ) && ( mem[ bp+2 + a ] <= 126 )) {
+          System.out.println((char) mem[ bp+2 + a ]);
+        }
       }
-      else if ( op == newCode ) {			// 31 new                   *tested*
+      else if ( op == newCode ) {			// 31 new
         int m = mem[ bp+2 + b ];
         hp = hp - m;
         mem[ bp+2 + a ] = hp;
@@ -344,11 +344,11 @@ public class VPL
         System.out.println("Fatal error: unknown opcode [" + op + "]" );
         System.exit(1);
       }
-       
+
       step++;
 
     }while( !done );
-    
+
 
   }// main
 
@@ -363,7 +363,7 @@ public class VPL
   private static final int passCode 		= 3;	// pass
   private static final int allocCode 		= 4;	// locals
   private static final int returnCode 		= 5;  	// return 			a means "return and put
-																		// copy of value stored in cell a in register rv
+  // copy of value stored in cell a in register rv
   private static final int getRetvalCode 	= 6;	// get retval - op a means "copy rv into cell a"
   private static final int jumpCode 		= 7;	// jump
   private static final int condJumpCode 	= 8;	// cond
@@ -379,18 +379,18 @@ public class VPL
   private static final int lessCode 		= 16;	// less than
   private static final int lessEqualCode 	= 17;	// less than or equal
   private static final int andCode 			= 18;	// and
-  private static final int orCode 			= 19;	// or 			
+  private static final int orCode 			= 19;	// or
   private static final int notCode 			= 20;	// not
   private static final int oppCode 			= 21;	// opposite
-  
+
   // ops involving transfer of data
   private static final int litCode 			= 22;	// litCode a b means "cell a gets b"
   private static final int copyCode 		= 23;	// copy a b means "cell a gets cell b"
   private static final int getCode 			= 24;	// op a b means "cell a gets
-													// contents of cell whose 
-													// index is stored in b"
+  // contents of cell whose
+  // index is stored in b"
   private static final int putCode = 25;  			// op a b means "put contents
-     // of cell b in cell whose offset is stored in cell a"
+  // of cell b in cell whose offset is stored in cell a"
 
   // system-level ops:
   private static final int haltCode 		= 26;	// halt
@@ -399,7 +399,7 @@ public class VPL
   private static final int newlineCode 		= 29;	// newline
   private static final int symbolCode 		= 30;	// symbol
   private static final int newCode 			= 31;	// new
-  
+
   // global variable ops:
   private static final int allocGlobalCode 	= 32;	// allocate global space
   private static final int toGlobalCode 	= 33;	// copy to global
@@ -410,7 +410,7 @@ public class VPL
 
   // return the number of arguments after the opcode,
   // except ops that have a label return number of arguments
-  // after the label, which always comes immediately after 
+  // after the label, which always comes immediately after
   // the opcode
   private static int numArgs( int opcode )
   {
@@ -420,38 +420,38 @@ public class VPL
     else if( opcode == condJumpCode ) return 1;  // condJump label expr
     else if( opcode == callCode ) 	  return 0;  // call label
 
-    // for all other ops, lump by count:
+      // for all other ops, lump by count:
 
     else if( opcode==noopCode ||
-             opcode==haltCode ||
-             opcode==newlineCode ||
-             opcode==debugCode
-           ) 
+            opcode==haltCode ||
+            opcode==newlineCode ||
+            opcode==debugCode
+    )
       return 0;  // op
 
-    else if( opcode==passCode || opcode==allocCode || 
-             opcode==returnCode || opcode==getRetvalCode || 
-             opcode==inputCode || 
-             opcode==outputCode || opcode==symbolCode ||
-             opcode==allocGlobalCode
-           )  
+    else if( opcode==passCode || opcode==allocCode ||
+            opcode==returnCode || opcode==getRetvalCode ||
+            opcode==inputCode ||
+            opcode==outputCode || opcode==symbolCode ||
+            opcode==allocGlobalCode
+    )
       return 1;  // op arg1
 
-    else if( opcode==notCode || opcode==oppCode || 
-             opcode==litCode || opcode==copyCode || opcode==newCode ||
-             opcode==toGlobalCode || opcode==fromGlobalCode
+    else if( opcode==notCode || opcode==oppCode ||
+            opcode==litCode || opcode==copyCode || opcode==newCode ||
+            opcode==toGlobalCode || opcode==fromGlobalCode
 
-           ) 
+    )
       return 2;  // op arg1 arg2
 
     else if( opcode==addCode ||  opcode==subCode || opcode==multCode ||
-             opcode==divCode ||  opcode==remCode || opcode==equalCode ||
-             opcode==notEqualCode ||  opcode==lessCode || 
-             opcode==lessEqualCode || opcode==andCode ||
-             opcode==orCode || opcode==getCode || opcode==putCode
-           )
+            opcode==divCode ||  opcode==remCode || opcode==equalCode ||
+            opcode==notEqualCode ||  opcode==lessCode ||
+            opcode==lessEqualCode || opcode==andCode ||
+            opcode==orCode || opcode==getCode || opcode==putCode
+    )
       return 3;		// op arg1 arg2 arg3
-   
+
     else
     {
       System.out.println("Fatal error: unknown opcode [" + opcode + "]" );

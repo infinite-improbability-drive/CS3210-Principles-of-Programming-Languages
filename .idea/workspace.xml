@@ -4,19 +4,10 @@
     <list default="true" id="a84e6708-1ce0-47e7-9a72-e46a603b91d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 1/VPL.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/VPL.java" afterDir="false" />
-<<<<<<< HEAD
-=======
-      <change beforePath="$PROJECT_DIR$/Project 1/test3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/test3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 1/test4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/test4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project 1/ex3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/ex3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/ex1a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/ex1a.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project 1/someUnitTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project 1/someUnitTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/ex3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/ex3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/someUnitTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/someUnitTests.txt" afterDir="false" />
->>>>>>> Project_01_dev
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,55 +52,34 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
           <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="1" />
-          <entry key="PLAIN_TEXT" value="20" />
-          <entry key="PLAIN_TEXT" value="37" />
           <entry key="PLAIN_TEXT" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-<<<<<<< HEAD
-          <entry key="JAVA" value="737" />
-          <entry key="PLAIN_TEXT" value="374" />
-=======
-          <entry key="JAVA" value="1476" />
-          <entry key="PLAIN_TEXT" value="635" />
-          <entry key="JAVA" value="1639" />
-          <entry key="PLAIN_TEXT" value="888" />
           <entry key="JAVA" value="1684" />
           <entry key="PLAIN_TEXT" value="1508" />
->>>>>>> Project_01_dev
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="1" />
-          <entry key="txt" value="20" />
           <entry key="someUnitTests" value="1" />
           <entry key="txt" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-<<<<<<< HEAD
-          <entry key="java" value="737" />
-          <entry key="txt" value="374" />
-=======
-          <entry key="java" value="1476" />
-          <entry key="txt" value="635" />
-          <entry key="java" value="1639" />
-          <entry key="txt" value="888" />
           <entry key="java" value="1684" />
           <entry key="txt" value="1508" />
->>>>>>> Project_01_dev
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -122,21 +92,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project 1/VPL.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="4859">
-              <caret line="463" lean-forward="true" selection-start-line="463" selection-end-line="463" />
-=======
-            <state relative-caret-position="226">
-              <caret line="200" column="23" selection-start-line="200" selection-start-column="23" selection-end-line="200" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#15056#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            <state relative-caret-position="328">
-              <caret line="198" column="29" lean-forward="true" selection-start-line="198" selection-start-column="29" selection-end-line="198" selection-end-column="29" />
         <entry file="file://$PROJECT_DIR$/Project 1/VPL.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -144,32 +99,11 @@
               <folding>
                 <element signature="e#0#31185#0" expanded="true" />
               </folding>
->>>>>>> Project_01_dev
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/Project 1/test2.txt">
-=======
-        <entry file="file://$PROJECT_DIR$/Project 1/test3.txt">
->>>>>>> Project_01_dev
-        <entry file="file://$PROJECT_DIR$/Project 1/ex3.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Project 1/someUnitTests">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="14" />
-            <state relative-caret-position="-2490">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         <entry file="file://$PROJECT_DIR$/Project 1/someUnitTests.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -204,18 +138,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Project 1/ex1a.txt" />
         <option value="$PROJECT_DIR$/Project 1/test1.txt" />
         <option value="$PROJECT_DIR$/Project 1/test2.txt" />
-<<<<<<< HEAD
-=======
-        <option value="$PROJECT_DIR$/Project 1/test4.txt" />
-        <option value="$PROJECT_DIR$/Project 1/test3.txt" />
         <option value="$PROJECT_DIR$/Project 1/test3.txt" />
         <option value="$PROJECT_DIR$/Project 1/test4.txt" />
         <option value="$PROJECT_DIR$/Project 1/ex1a.txt" />
->>>>>>> Project_01_dev
-        <option value="$PROJECT_DIR$/Project 1/VPL.java" />
         <option value="$PROJECT_DIR$/Project 1/ex1c.txt" />
         <option value="$PROJECT_DIR$/Project 1/ex3.txt" />
         <option value="$PROJECT_DIR$/Project 1/someUnitTests.txt" />
@@ -230,8 +157,6 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-  <component name="ProjectFrameBounds">
-  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -241,8 +166,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -260,7 +183,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -268,11 +190,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537846824058" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537944173048" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537948992596" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Project 1" />
->>>>>>> Project_01_dev
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -294,7 +213,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Project 1 test3">
   <component name="RunManager" selected="Application.Project 1 someUnitTests">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
@@ -571,16 +489,6 @@
       <option name="project" value="LOCAL" />
       <updated>1536548796363</updated>
     </task>
-<<<<<<< HEAD
-    <task id="LOCAL-00010" summary="John^2 #4, tested various opcodes">
-      <created>1536551168610</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1536551168610</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
-=======
     <task id="LOCAL-00010" summary="John^2+Heather #2, more testing">
       <created>1536553659257</created>
       <option name="number" value="00010" />
@@ -595,7 +503,6 @@
       <option name="project" value="LOCAL" />
       <updated>1536553916971</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
     <task id="LOCAL-00012" summary="John #15; commenting someUnitTests.txt.">
       <created>1537947360323</created>
       <option name="number" value="00012" />
@@ -604,7 +511,6 @@
       <updated>1537947360323</updated>
     </task>
     <option name="localTasksCounter" value="13" />
->>>>>>> Project_01_dev
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -621,11 +527,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11940298" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24945295" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12153518" />
@@ -638,9 +539,6 @@
       <window_info id="UI Designer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.48806942" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4041621" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4002169" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39868566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -678,17 +576,10 @@
     <MESSAGE value="John #8, added 'test2.txt'" />
     <MESSAGE value="John #9, added 'test3.txt', 'test4.txt', added run configurations for all exercise and test input files" />
     <MESSAGE value="John #10, fixing up 27 input" />
-<<<<<<< HEAD
-    <MESSAGE value="John^2 #4, tested various opcodes" />
-    <option name="LAST_COMMIT_MESSAGE" value="John^2 #4, tested various opcodes" />
-=======
     <MESSAGE value="John^2+Heather #2, more testing" />
     <MESSAGE value="John^2+Heather #3, more more testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="John^2+Heather #3, more more testing" />
->>>>>>> Project_01_dev
     <MESSAGE value="John #15; commenting someUnitTests.txt." />
     <option name="LAST_COMMIT_MESSAGE" value="John #15; commenting someUnitTests.txt." />
->>>>>>> Project_01_dev
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -697,7 +588,6 @@
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/FileInputStream.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Scanner.java" />
-    <entry file="file://$PROJECT_DIR$/Project 1/ex1a.txt">
     <entry file="file://$PROJECT_DIR$/Project 1/test1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -708,26 +598,19 @@
     <entry file="file://$PROJECT_DIR$/Project 1/test2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="7" />
           <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project 1/test1.txt">
     <entry file="file://$PROJECT_DIR$/Project 1/test3.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="4" />
         <state relative-caret-position="221">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project 1/test2.txt">
     <entry file="file://$PROJECT_DIR$/Project 1/test4.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
         <state relative-caret-position="221">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
@@ -741,44 +624,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project 1/ex1b.txt">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project 1/ex1c.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    <entry file="file://$PROJECT_DIR$/Project 1/ex1a.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project 1/test4.txt">
     <entry file="file://$PROJECT_DIR$/Project 1/ex1a.txt" />
->>>>>>> Project_01_dev
     <entry file="file://$PROJECT_DIR$/Project 1/ex4.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         <state relative-caret-position="340">
           <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/Project 1/test2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-=======
-    <entry file="file://$PROJECT_DIR$/Project 1/test3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="14" />
     <entry file="file://$PROJECT_DIR$/Project 1/ex1c.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -790,28 +649,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
->>>>>>> Project_01_dev
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project 1/someUnitTests" />
     <entry file="file://$PROJECT_DIR$/Project 1/ex3.txt">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="4859">
-          <caret line="463" lean-forward="true" selection-start-line="463" selection-end-line="463" />
-=======
-        <state relative-caret-position="226">
-          <caret line="200" column="23" selection-start-line="200" selection-start-column="23" selection-end-line="200" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#15056#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        <state relative-caret-position="328">
-          <caret line="198" column="29" lean-forward="true" selection-start-line="198" selection-start-column="29" selection-end-line="198" selection-end-column="29" />
         <state relative-caret-position="170">
           <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
->>>>>>> Project_01_dev
         </state>
       </provider>
     </entry>
@@ -824,15 +669,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project 1/VPL.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="-2490">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         <state relative-caret-position="119">
           <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
             <element signature="e#0#31185#0" expanded="true" />
           </folding>
->>>>>>> Project_01_dev
         </state>
       </provider>
     </entry>

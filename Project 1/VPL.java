@@ -178,7 +178,6 @@ public class VPL
 
       // put your work right here!
 
-      if ( op == callCode ) {               // 2 call                    *tested*
       if ( op == callCode ) {               // 2 call
         mem[ sp ] = ip;
         mem[ sp + 1 ] = bp;
@@ -187,14 +186,6 @@ public class VPL
         numPassed = 0;
         ip = a;
       }
-      else if ( op == passCode ) {          // 3 pass                   *tested*
-        mem[ sp + 2 + numPassed ] = mem[ bp+2 + a];
-        numPassed++;
-      }
-      else if ( op == allocCode ) {			// 4 locals                 *tested*
-        sp = sp + a;
-      }
-      else if ( op == returnCode) {			// 5 return                 *tested*
       else if ( op == passCode ) {          // 3 pass
         mem[ sp + 2 + numPassed ] = mem[ bp+2 + a];
         numPassed++;
@@ -208,13 +199,6 @@ public class VPL
         ip = mem[ bp ];
         bp = mem[ bp + 1 ];
       }
-      else if ( op == getRetvalCode ) {		// 6 get retval             *tested*
-        mem[ bp+2 + a ] = rv;
-      }
-      else if ( op == jumpCode ) {			// 7 jump                   *tested*
-        ip = a;
-      }
-      else if ( op == condJumpCode ) {		// 8 cond                   *tested*
       else if ( op == getRetvalCode ) {		// 6 get retval
         mem[ bp+2 + a ] = rv;
       }
@@ -297,13 +281,6 @@ public class VPL
           mem[ bp+2 + a ] = 0;
         }
       }
-      else if ( op == oppCode ) {			// 21 opposite              *tested*
-        mem[ bp+2 + a ] = - mem[ bp+2 + b ];
-      }
-      else if ( op == litCode ) {			// 22 literal               *tested*
-        mem[ bp+2 + a ] = b;
-      }
-      else if ( op == copyCode ) {			// 23 copy                  *tested*
       else if ( op == oppCode ) {			// 21 opposite
         mem[ bp+2 + a ] = - mem[ bp+2 + b ];
       }
@@ -319,11 +296,10 @@ public class VPL
       else if ( op == putCode ) {			// 25 put
         mem[ mem[ bp+2 + a ] + mem[ bp+2 + b ] ] = mem[ bp+2 + c ];
       }
-      else if ( op == haltCode ) {			// 26 halt                  
+      else if ( op == haltCode ) {			// 26 halt
         System.exit(1);
       }
-      else if ( op == inputCode ) {			// 27 input                 *tested*
-      else if ( op == inputCode ) {			// 27 input                 
+      else if ( op == inputCode ) {			// 27 input
         System.out.print("? ");
         try {
           mem[ bp+2 + a ] = keys.nextInt();
@@ -338,9 +314,7 @@ public class VPL
       else if ( op == newlineCode ) {		// 29 newline
         System.out.println();
       }
-      else if ( op == symbolCode ) {		// 30 symbol                *tested*
       else if ( op == symbolCode ) {		// 30 symbol
->>>>>>> Project_01_dev
         if (( mem[ bp+2 + a ] >= 32 ) && ( mem[ bp+2 + a ] <= 126 )) {
           System.out.println((char) mem[ bp+2 + a ]);
         }

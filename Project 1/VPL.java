@@ -176,7 +176,7 @@ public class VPL
 
       // put your work right here!
 
-      if ( op == callCode ) {             // 2 call                     *tested*
+      if ( op == callCode ) {               // 2 call                    *tested*
           mem[ sp ] = ip;
           mem[ sp + 1 ] = bp;
           bp = sp;
@@ -297,12 +297,11 @@ public class VPL
       else if ( op == haltCode ) {			// 26 halt                  *tested*
         System.exit(1);
       }
-      else if ( op == inputCode ) {			// 27 input                 *tested* - no fancy error checking here
+      else if ( op == inputCode ) {			// 27 input                 *tested*
          System.out.print("? ");
           try {
               mem[ bp+2 + a ] = keys.nextInt();
           }
-
           catch (InputMismatchException e) {
                 System.out.println("Error - invalid input");
           }

@@ -20,6 +20,80 @@ public class VPL
     public static void main(String[] args) throws Exception {
 
         keys = new Scanner( System.in );
+    keys = new Scanner( System.in );
+
+    if( args.length != 2 ) {
+      System.out.println("Usage: java VPL <vpl program> <memory size>" );
+      System.exit(1);
+    }
+
+    fileName = args[0];
+
+    max = Integer.parseInt( args[1] );
+    mem = new int[max];
+
+    // load the program into the front part of
+    // memory
+    Scanner input = new Scanner( new File( fileName ) );
+    String line;
+    StringTokenizer st;
+    int opcode;
+
+    ArrayList<IntPair> labels, holes;
+    labels = new ArrayList<IntPair>();
+    holes = new ArrayList<IntPair>();
+    int label;
+
+    // load the code
+
+    int k=0;
+    while ( input.hasNextLine() ) {
+      line = input.nextLine();
+      // System.out.println("parsing line [" + line + "]");
+      if( line != null )
+      {// extract any tokens
+        st = new StringTokenizer( line );
+        if( st.countTokens() > 0 )
+        {// have a token, so must be an instruction (as opposed to empty line)
+
+          opcode = Integer.parseInt(st.nextToken());
+
+          // load the instruction into memory:
+
+          if( opcode == labelCode )
+          {// note index that comes where label would go
+            label = Integer.parseInt(st.nextToken());
+            labels.add( new IntPair( label, k ) );
+          }
+          else if( opcode == noopCode ){
+          }
+          else
+          {// opcode actually gets stored
+            mem[k] = opcode;  k++;
+ 
+            if( opcode == callCode || opcode == jumpCode ||
+                opcode == condJumpCode )
+            {// note the hole immediately after the opcode to be filled in later
+              label = Integer.parseInt( st.nextToken() );
+              mem[k] = label;  holes.add( new IntPair( k, label ) );
+              ++k;
+            }
+
+            // load correct number of arguments (following label, if any):
+            for( int j=0; j<numArgs(opcode); ++j )
+            {
+              mem[k] = Integer.parseInt(st.nextToken());
+              ++k;
+            }
+
+          }// not a label
+
+        }// have a token, so must be an instruction
+      }// have a line
+    }// loop to load code
+    
+    //System.out.println("after first scan:");
+    //showMem( 0, k-1 );
 
         if( args.length != 2 ) {
             System.out.println("Usage: java VPL <vpl program> <memory size>" );
@@ -39,6 +113,8 @@ public class VPL
 
     System.out.println("after replacing labels:");
     showMem( 0, k-1 );
+    // System.out.println("after replacing labels:");
+    // showMem( 0, k-1 );
 
     // initialize registers:
     bp = k;  sp = k+2;  ip = 0;  rv = -1;  hp = max;
@@ -48,6 +124,8 @@ public class VPL
 
     System.out.println("Code is " );
     showMem( 0, codeEnd );
+    // System.out.println("Code is " );
+    // showMem( 0, codeEnd );
 
     gp = codeEnd + 1;
 
@@ -65,6 +143,7 @@ public class VPL
 
     do {
 
+      /*
       // show details of current step
       System.out.println("--------------------------");
       System.out.println("Step of execution with IP = " + ip + " opcode: " +
@@ -78,6 +157,7 @@ public class VPL
       System.out.println("hit <enter> to go on" );
       keys.nextLine();
 
+      */
 
       oldIp = ip;
 
@@ -107,6 +187,7 @@ public class VPL
       // put your work right here!
 
       if ( op == callCode ) {             // 2 call                     *mostly tested*
+      if ( op == callCode ) {               // 2 call                    *tested*
           mem[ sp ] = ip;
           mem[ sp + 1 ] = bp;
           bp = sp;
@@ -116,6 +197,7 @@ public class VPL
       }
       else if ( op == passCode ) {          // 3 pass                   *tested*
           mem[ sp + 2 + numPassed ] = mem[ bp + 2 + a];
+          mem[ sp + 2 + numPassed ] = mem[ bp+2 + a];
           numPassed++;
       }
       else if ( op == allocCode ) {			// 4 locals                 *tested*
@@ -123,14 +205,19 @@ public class VPL
       }
       else if ( op == returnCode) {			// 5 return                 *mostly tested*
           rv = mem [ bp + 2 + a ];
+      else if ( op == returnCode) {			// 5 return                 *tested*
+          rv = mem [ bp+2 + a ];
           sp = bp;
           ip = mem[ bp ];
           bp = mem[ bp + 1 ];
       }
       else if ( op == getRetvalCode ) {		// 6 get retval
          mem[ bp + 2 + a ] = rv;
+      else if ( op == getRetvalCode ) {		// 6 get retval             *tested*
+         mem[ bp+2 + a ] = rv;
       }
       else if ( op == jumpCode ) {			// 7 jump
+      else if ( op == jumpCode ) {			// 7 jump                   *tested*
          ip = a;
       }
       else if ( op == condJumpCode ) {		// 8 cond
@@ -139,6 +226,9 @@ public class VPL
 	     }
          else {
 		    ip++;
+      else if ( op == condJumpCode ) {		// 8 cond                   *tested*
+         if ( mem[ bp+2 + b ] != 0 ) {
+		    ip = a;
 	     }
       }
       else if ( op == addCode ) {			// 9 add                    *tested*
@@ -614,6 +704,7 @@ public class VPL
         System.exit(1);
       }
       else if ( op == inputCode ) {			// 27 input                 *tested* - no fancy error checking here
+      else if ( op == inputCode ) {			// 27 input                 *tested*
          System.out.print("? ");
           try {
               mem[ bp+2 + a ] = keys.nextInt();
@@ -644,6 +735,7 @@ public class VPL
         gp = codeEnd + 1;
         bp = codeEnd + 1 + a;
         sp = bp + 2;
+        sp = bp+2;
       }
       else if ( op == toGlobalCode ) {		// 33 copy to global
         mem[ gp + a ] = mem[ bp+2 + b ];

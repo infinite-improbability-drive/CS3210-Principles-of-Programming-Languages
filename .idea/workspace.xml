@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a84e6708-1ce0-47e7-9a72-e46a603b91d9" name="Default Changelist" comment="" />
+    <list default="true" id="a84e6708-1ce0-47e7-9a72-e46a603b91d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS3210-Principles-of-Programming-Languages.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS3210-Principles-of-Programming-Languages.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project 2/Yor2en8v.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/VPL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/ex1a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/ex3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/someUnitTests" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/test1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/test4.txt" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +64,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="1" />
-          <entry key="PLAIN_TEXT" value="39" />
+          <entry key="PLAIN_TEXT" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -67,7 +77,7 @@
         <counts>
           <entry key="java" value="1" />
           <entry key="someUnitTests" value="1" />
-          <entry key="txt" value="38" />
+          <entry key="txt" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -78,6 +88,7 @@
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
+          <entry key="git.branch.checkout.local" value="1" />
           <entry key="git.branch.checkout.remote" value="1" />
         </counts>
       </usages-collector>
@@ -86,12 +97,17 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Project 1/VPL.java">
+        <entry file="file://$PROJECT_DIR$/Project 2/Corgi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="831">
-              <caret line="472" column="7" selection-start-line="472" selection-start-column="7" selection-end-line="472" selection-end-column="7" />
+            <state relative-caret-position="187">
+              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project 2/quadroots.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -138,8 +154,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -148,8 +164,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,23 +177,48 @@
             <path>
               <item name="CS3210-Principles-of-Programming-Languages" type="b2602c69:ProjectViewProjectNode" />
               <item name="CS3210-Principles-of-Programming-Languages" type="462c0819:PsiDirectoryNode" />
-              <item name="Project 1" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS3210-Principles-of-Programming-Languages" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS3210-Principles-of-Programming-Languages" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS3210-Principles-of-Programming-Languages" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS3210-Principles-of-Programming-Languages" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="CS3210-Principles-of-Programming-Languages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS3210-Principles-of-Programming-Languages" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS3210-Principles-of-Programming-Languages" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="CS3210-Principles-of-Programming-Languages" type="462c0819:PsiDirectoryNode" />
+              <item name="Project 2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS3210-Principles-of-Programming-Languages" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS3210-Principles-of-Programming-Languages" type="462c0819:PsiDirectoryNode" />
+              <item name="Project 2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537948992596" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539654290125" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Project 1" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -195,7 +237,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Project 1 someUnitTests">
+  <component name="RunManager" selected="Application.Project 2">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -331,6 +373,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Project 2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Corgi" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -382,6 +431,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Project 2" />
       <item itemvalue="Application.Project 1 ex1a" />
       <item itemvalue="Application.Project 1 ex1b" />
       <item itemvalue="Application.Project 1 ex1c" />
@@ -508,9 +558,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2549234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12793177" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Nl-Palette" order="3" />
@@ -520,7 +570,7 @@
       <window_info id="UI Designer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4002169" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39587852" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39868566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -643,6 +693,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Project 2/quadroots.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project 2/Corgi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -683,7 +743,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

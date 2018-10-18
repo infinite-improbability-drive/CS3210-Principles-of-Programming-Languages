@@ -83,30 +83,6 @@ public class Lexer {
 				 data += (char) sym;
 				 state = 10;
 			   }
-			   else if (state == 10){
-				 if( getNextSymbol() == '*'){
-					state = 11;
-				 }else{
-					data += (char) sym;
-					putBackSymbol( sym );
-					return new Token ( "single", data);
-				 }
-			   }
-			   else if (state == 11){
-				 if( getNextSymbol() == '*'){
-					state = 12;
-				 }else{
-					state = 11;
-				 }
-			   }
-			   else if (state == 12) {
-			      if( getNextSymbol() != '/') {
-					state = 11;
-				  }else{
-					data = null;
-					state = 1;
-				  }  
-			   }
                else {
                  error("Error in lexical analysis phase with symbol "
                                       + sym + " in state " + state );
@@ -172,7 +148,30 @@ public class Lexer {
                   done = true;
                }
             }
-
+            else if (state == 10){
+                if( sym == '*'){
+                    state = 11;
+                }else{
+                    data += (char) sym;
+                    putBackSymbol( sym );
+                    return new Token ( "single", data);
+                }
+            }
+            else if (state == 11){
+                if( sym == '*'){
+                    state = 12;
+                }else{
+                    state = 11;
+                }
+            }
+            else if (state == 12) {
+                if( sym != '/') {
+                    state = 11;
+                }else{
+                    data = null;
+                    state = 1;
+                }
+            }
             // note: states 7, 8, and 9 are accepting states with
             //       no arcs out of them, so they are handled
             //       in the arc going into them

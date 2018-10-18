@@ -68,7 +68,7 @@ public class Lexer {
                  state = 6;
                }
                else if ( sym == '+' || sym == '-' || sym == '*' ||
-                         sym == '/' || sym == '(' || sym == ')' ||
+                         sym == '(' || sym == ')' ||
                          sym == ',' || sym == '='
                        ) {
                   data += (char) sym;
@@ -79,6 +79,34 @@ public class Lexer {
                   state = 9;
                   done = true;
                }
+			   else if ( sym == '/'){
+				 data += (char) sym;
+				 state = 10;
+			   }
+			   else if (state == 10){
+				 if( getNextSymbol() == '*'){
+					state = 11;
+				 }else{
+					data += (char) sym;
+					putBackSymbol( sym );
+					return new Token ( "single", data);
+				 }
+			   }
+			   else if (state == 11){
+				 if( getNextSymbol() == '*'){
+					state = 12;
+				 }else{
+					state = 11;
+				 }
+			   }
+			   else if (state == 12) {
+			      if( getNextSymbol() != '/') {
+					state = 11;
+				  }else{
+					data = null;
+					state = 1;
+				  }  
+			   }
                else {
                  error("Error in lexical analysis phase with symbol "
                                       + sym + " in state " + state );

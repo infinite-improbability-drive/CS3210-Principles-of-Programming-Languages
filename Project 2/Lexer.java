@@ -84,23 +84,23 @@ public class Lexer {
 				 state = 10;
 			   }
 			   else if (state == 10){
-				 if( getNextSymbol == '*'){
+				 if( getNextSymbol() == '*'){
 					state = 11;
 				 }else{
 					data += (char) sym;
-					putBackSymbol( sym )
+					putBackSymbol( sym );
 					return new Token ( "single", data);
 				 }
 			   }
 			   else if (state == 11){
-				 if( getNextSymbol == '*'){
+				 if( getNextSymbol() == '*'){
 					state = 12;
 				 }else{
 					state = 11;
 				 }
 			   }
 			   else if (state == 12) {
-			      if( getNextSymbol != '/') {
+			      if( getNextSymbol() != '/') {
 					state = 11;
 				  }else{
 					data = null;

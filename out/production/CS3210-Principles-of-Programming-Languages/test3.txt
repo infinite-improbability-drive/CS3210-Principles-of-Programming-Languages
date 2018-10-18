@@ -1,0 +1,13 @@
+4 3 locals
+22 0 7 literal
+3 0 pass
+22 0 42
+2 100 call
+6 0 get retval
+28 0
+26
+1 100
+4 1
+22 1 23 literal
+5 0
+

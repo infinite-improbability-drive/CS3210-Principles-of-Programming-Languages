@@ -168,7 +168,7 @@ public class Lexer {
                 if( sym != '/') {
                     state = 11;
                 }else{
-                    data = null;
+                    data = "";
                     state = 1;
                 }
             }

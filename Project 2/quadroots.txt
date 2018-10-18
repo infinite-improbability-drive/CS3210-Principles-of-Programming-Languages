@@ -1,10 +1,10 @@
-"enter a:"
+print "enter a:"
 
 a = input()
 
-"enter b:"
+print "enter b:"
 b = input()
-"enter c:"
+print "enter c:"
 c = input()
 
 disc = pow(b,2) - 4*a*c
@@ -12,5 +12,5 @@ disc = pow(b,2) - 4*a*c
 x1 = (-b - sqrt(disc) ) / (2*a)
 x2 = (-b + sqrt(disc) ) / (2*a)
 
-"x1: "    print x1    newline
-"x2: "    print x2    newline
+print "x1: "    print x1    newline
+print "x2: "    print x2    newline

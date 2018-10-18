@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a84e6708-1ce0-47e7-9a72-e46a603b91d9" name="Default Changelist" comment="John #4: Fixed workspace file">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project 2/quadroots.txt" afterPath="$PROJECT_DIR$/Project 2/quadroots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/quadroots.txt" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/quadroots.txt" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,8 +93,8 @@
       <file leaf-file-name="Lexer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project 2/Lexer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+            <state relative-caret-position="196">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,29 +110,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quadroots.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="quadroots.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project 2/quadroots.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1361">
-              <caret line="237" column="14" lean-forward="false" selection-start-line="237" selection-start-column="14" selection-end-line="237" selection-end-column="14" />
+            <state relative-caret-position="-562">
+              <caret line="284" column="14" lean-forward="false" selection-start-line="284" selection-start-column="14" selection-end-line="284" selection-end-column="14" />
               <folding>
-                <element signature="e#6044#6048#0" expanded="true" />
-                <element signature="e#6068#6072#0" expanded="true" />
-                <element signature="e#6097#6101#0" expanded="true" />
-                <element signature="e#6154#6158#0" expanded="true" />
-                <element signature="e#6182#6186#0" expanded="true" />
-                <element signature="e#6210#6214#0" expanded="true" />
-                <element signature="e#6240#6244#0" expanded="true" />
+                <marker date="1539897715799" expanded="true" signature="55918:55937" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="55918:55955" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="55918:55968" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="55918:55983" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56018:58544" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56031:58529" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56085:56380" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56104:56365" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56167:56345" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56207:56311" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56228:56289" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56430:56757" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56449:56742" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56544:56722" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56584:56688" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56605:56666" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56808:57073" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56827:57058" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56860:57038" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56900:57004" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="56921:56982" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57116:57422" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57135:57407" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57209:57387" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57249:57353" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57270:57331" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57473:57857" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57492:57842" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57605:57822" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57645:57788" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57666:57766" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57892:58198" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57911:58183" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="57985:58163" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="58025:58129" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="58046:58107" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="58250:58515" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="58269:58500" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="58302:58480" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="58342:58446" ph="..." />
+                <marker date="1539897715799" expanded="true" signature="58363:58424" ph="..." />
               </folding>
             </state>
           </provider>
@@ -141,7 +177,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>opening file</find>
-      <find>opening</find>
       <find>state&gt;</find>
       <find>&lt;state</find>
       <find>&lt;provider</find>
@@ -150,6 +185,7 @@
       <find>&lt;list</find>
       <find>&lt;layout</find>
       <find>&lt;component</find>
+      <find>opening</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -158,8 +194,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Project 2/quadroots.txt" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/Project 2/quadroots.txt" />
       </list>
     </option>
   </component>
@@ -224,6 +260,11 @@
       <pane id="AndroidView" />
     </panes>
   </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\CS3210-Principles-of-Programming-Languages\Project 1" />
@@ -241,7 +282,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Project 2 Corgi">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -588,12 +629,12 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Project 2" type="Application" factoryName="Application">
+    <configuration default="false" name="Project 1 test4" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Corgi" />
+      <option name="MAIN_CLASS_NAME" value="VPL" />
       <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="PROGRAM_PARAMETERS" value="test4.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -603,12 +644,12 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Project 1 test4" type="Application" factoryName="Application">
+    <configuration default="false" name="Project 2 Corgi" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" value="test4.txt 10000" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <option name="MAIN_CLASS_NAME" value="Corgi" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/Project 2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -630,8 +671,8 @@
       <item index="8" class="java.lang.String" itemvalue="Application.Project 1 test1" />
       <item index="9" class="java.lang.String" itemvalue="Application.Project 1 test2" />
       <item index="10" class="java.lang.String" itemvalue="Application.Project 1 test3" />
-      <item index="11" class="java.lang.String" itemvalue="Application.Project 2" />
-      <item index="12" class="java.lang.String" itemvalue="Application.Project 1 test4" />
+      <item index="11" class="java.lang.String" itemvalue="Application.Project 1 test4" />
+      <item index="12" class="java.lang.String" itemvalue="Application.Project 2 Corgi" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -648,7 +689,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539897515231</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="John #4: Fixed workspace file">
+      <created>1539897521748</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1539897521748</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -796,34 +844,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project 2/Lexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project 2/quadroots.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1361">
-          <caret line="237" column="14" lean-forward="false" selection-start-line="237" selection-start-column="14" selection-end-line="237" selection-end-column="14" />
+        <state relative-caret-position="-562">
+          <caret line="284" column="14" lean-forward="false" selection-start-line="284" selection-start-column="14" selection-end-line="284" selection-end-column="14" />
           <folding>
-            <element signature="e#6044#6048#0" expanded="true" />
-            <element signature="e#6068#6072#0" expanded="true" />
-            <element signature="e#6097#6101#0" expanded="true" />
-            <element signature="e#6154#6158#0" expanded="true" />
-            <element signature="e#6182#6186#0" expanded="true" />
-            <element signature="e#6210#6214#0" expanded="true" />
-            <element signature="e#6240#6244#0" expanded="true" />
+            <marker date="1539897715799" expanded="true" signature="55918:55937" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="55918:55955" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="55918:55968" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="55918:55983" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56018:58544" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56031:58529" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56085:56380" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56104:56365" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56167:56345" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56207:56311" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56228:56289" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56430:56757" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56449:56742" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56544:56722" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56584:56688" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56605:56666" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56808:57073" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56827:57058" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56860:57038" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56900:57004" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="56921:56982" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57116:57422" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57135:57407" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57209:57387" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57249:57353" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57270:57331" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57473:57857" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57492:57842" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57605:57822" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57645:57788" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57666:57766" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57892:58198" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57911:58183" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="57985:58163" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="58025:58129" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="58046:58107" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="58250:58515" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="58269:58500" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="58302:58480" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="58342:58446" ph="..." />
+            <marker date="1539897715799" expanded="true" signature="58363:58424" ph="..." />
           </folding>
         </state>
       </provider>
@@ -887,6 +953,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project 2/Lexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project 2/quadroots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>

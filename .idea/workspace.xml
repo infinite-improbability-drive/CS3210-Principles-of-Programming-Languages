@@ -142,6 +142,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Lexer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project 2/Lexer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -206,10 +210,6 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
-  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -297,16 +297,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539655127271" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Project 1" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537846824058" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540086609513" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Project 2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
->>>>>>> master
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -325,36 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Project 2">
-  <component name="RunManager" selected="Application.Project 2 Lexer">
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.Project 2 Corgi">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -382,94 +348,14 @@
       </Profilers>
       <method />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="filePath" />
       <option name="vmParameters" />
       <option name="alternativeJrePath" />
@@ -477,216 +363,136 @@
       <option name="passParentEnvs" value="true" />
       <option name="workingDirectory" />
       <option name="isAlternativeJrePathEnabled" value="false" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
       <envs />
-      <properties />
-      <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="Project 1 ex1a" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration name="Project 1 ex1a" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
       <option name="PROGRAM_PARAMETERS" value="ex1a.txt 10000" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Project 1 ex1b" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" value="ex1b.txt 10000" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Project 1 ex1c" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" value="ex1c.txt 10000" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Project 1 ex1d" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" value="ex1d.txt 10000" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Project 1 ex2" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" value="ex2.txt 10000" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Project 1 ex3" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" value="ex3.txt 10000" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Project 1 ex4" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" value="ex4.txt 10000" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Project 1 someUnitTests" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" value="someUnitTests.txt 10000" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Project 1 test1" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" value="test1.txt 10000" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Project 1 test2" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" value="test2.txt 10000" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Project 1 test3" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" value="test3.txt 10000" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Project 1 test4" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="VPL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" value="test4.txt 10000" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
-<<<<<<< HEAD
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Project 2" type="Application" factoryName="Application">
+    <configuration name="Project 1 ex1b" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="ex1b.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 ex1c" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="ex1c.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 ex1d" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="ex1d.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 ex2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="ex2.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 ex3" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="ex3.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 ex4" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="ex4.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 someUnitTests" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="someUnitTests.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 test1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="test1.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 test2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="test2.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 test3" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="PROGRAM_PARAMETERS" value="test3.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 1 test4" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="VPL" />
+      <option name="PROGRAM_PARAMETERS" value="test4.txt 10000" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 2 Corgi" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Corgi" />
       <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project 2 Lexer" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Lexer" />
+      <module name="CS3210-Principles-of-Programming-Languages" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project 2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -708,34 +514,42 @@
       <option name="isAlternativeJrePathEnabled" value="false" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-=======
->>>>>>> master
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="false" name="Project 2 Lexer" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Lexer" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CS3210-Principles-of-Programming-Languages" />
-      <envs />
-      <method />
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Project 2" />
+      <item itemvalue="Application.Project 2 Corgi" />
+      <item itemvalue="Application.Project 2 Lexer" />
       <item itemvalue="Application.Project 1 ex1a" />
       <item itemvalue="Application.Project 1 ex1b" />
       <item itemvalue="Application.Project 1 ex1c" />
@@ -748,25 +562,7 @@
       <item itemvalue="Application.Project 1 test2" />
       <item itemvalue="Application.Project 1 test3" />
       <item itemvalue="Application.Project 1 test4" />
-    <list size="13">
-      <item index="0" class="java.lang.String" itemvalue="Application.Project 1 ex1a" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Project 1 ex1b" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Project 1 ex1c" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Project 1 ex1d" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Project 1 ex2" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Project 1 ex3" />
-      <item index="6" class="java.lang.String" itemvalue="Application.Project 1 ex4" />
-      <item index="7" class="java.lang.String" itemvalue="Application.Project 1 someUnitTests" />
-      <item index="8" class="java.lang.String" itemvalue="Application.Project 1 test1" />
-      <item index="9" class="java.lang.String" itemvalue="Application.Project 1 test2" />
-      <item index="10" class="java.lang.String" itemvalue="Application.Project 1 test3" />
-      <item index="11" class="java.lang.String" itemvalue="Application.Project 1 test4" />
-      <item index="12" class="java.lang.String" itemvalue="Application.Project 2 Lexer" />
->>>>>>> master
     </list>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -917,6 +713,7 @@
       <window_info anchor="right" id="Properties" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -970,10 +767,6 @@
     <MESSAGE value="John^2+Heather #3, more more testing" />
     <MESSAGE value="John #1: added Project 2 to Sources" />
     <option name="LAST_COMMIT_MESSAGE" value="John #1: added Project 2 to Sources" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

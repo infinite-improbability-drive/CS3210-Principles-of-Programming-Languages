@@ -21,6 +21,3 @@ def main()
    "x2: "    print(x2 ) "\n"
 
 end
-4 1
-27 0
-26

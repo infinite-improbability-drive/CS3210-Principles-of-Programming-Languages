@@ -5,6 +5,13 @@ a = input()
 "enter b:"
 b = input()
 "enter c:"
+print "enter a:"
+
+a = input()
+
+print "enter b:"
+b = input()
+print "enter c:"
 c = input()
 
 disc = pow(b,2) - 4*a*c
@@ -14,3 +21,6 @@ x2 = (-b + sqrt(disc) ) / (2*a)
 
 "x1: "    print x1    newline
 "x2: "    print x2    newline
+print "x1: "    print x1    newline
+print "x2: "    print x2    newline
+>>>>>>> master

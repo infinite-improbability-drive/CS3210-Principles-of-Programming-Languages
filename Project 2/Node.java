@@ -89,7 +89,7 @@ public class Node {
   // to children
   public void draw( Camera cam, double x, double y, double h, double v ) {
 
-System.out.println("draw node " + id );
+    System.out.println("draw node " + id );
 
     // set drawing color
     cam.setColor( Color.black );
@@ -102,7 +102,7 @@ System.out.println("draw node " + id );
     // in a nice, uniform manner
     Node[] children = getChildren();
     int number = children.length;
-System.out.println("has " + number + " children");
+    System.out.println("has " + number + " children");
 
     double top = y - 0.75*v;
 

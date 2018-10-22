@@ -35,17 +35,17 @@ public class Parser {
    }
 
    private Node parseFuncCall(){
-      Node first = parseFuncDef();
       Token t = lex.getNextToken();
       if( lex.getNextToken().getKind().equals("var")) {
          if (lex.getNextToken().getDetails().equals("(")) {
             if (lex.getNextToken().getDetails().equals(")")) {
 
             }
-            else if (lex.getNextToken().getKind().equals("expr")) {
+            else if (lex.getNextToken().getKind().equals("args")) {
+               if (lex.getNextToken().getDetails().equals(")")) {
 
+               }
             }
-
          }
       }
       System.exit(1);

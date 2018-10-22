@@ -41,10 +41,10 @@ public class Parser {
             if (lex.getNextToken().getDetails().equals(")")) {
 
             }
-            else if (lex.getNextToken().getKind().equals("args")) {
-               if (lex.getNextToken().getDetails().equals(")")) {
+            else {
+               Node first = parseArgs();
+               return new Node("funcall", t.getDetails(), first, null, null);
 
-               }
             }
          }
       }

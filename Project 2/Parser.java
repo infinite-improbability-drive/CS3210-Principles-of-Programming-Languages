@@ -17,7 +17,81 @@ public class Parser {
    }
 
    public Node parseProgram() {
-      return parseStatements();
+
+      Node first = parseFuncCall();
+
+      //look ahead to see if there are more statements
+      Token token = lex.getNextToken();
+
+      if( token.isKind( "eof") ){
+         return new Node( "defs", first, null, null );
+      }
+      else{
+         lex.putBackToken( token );
+         Node second = parseFuncDefs();
+         return new Node( "def", first, second, null );
+      }
+
+   }
+
+   private Node parseFuncCall(){
+
+   }
+
+   private Node parseFuncDefs(){
+
+      Node first = parseFuncDef();
+
+      Token token = lex.getNextToken();
+
+      if( token.isKind( "eof" ) ){
+         return new Node( "def", first, null, null );
+      }
+      else{
+         lex.putBackToken( token );
+         Node second = parseFuncDefs();
+         return new Node( "def", first, second, null );
+      }
+
+   }
+
+   private Node parseFuncDef(){
+
+      string funcName = lex.getNextToken();
+      if( lex.getNextToken == "(" ){
+         if( lex.getNextToken == ")" ) {
+            if ( lex.getNextToken == "end" ) {
+               return new Node( "def", funcName, null, null, null );
+            } else {
+               lex.putBackToken( token );
+               Node first = parseStatements();
+               return new Node( "def", funcName, first, null, null );
+            }
+         }
+         else{
+            lex.putBackToken( token );
+            Node first = parseParams();
+
+            if( lex.getNextToken == ")" ) {
+               if (lex.getNextToken == "end" ) {
+                  return Node("def", funcName, first, null, null );
+               } else {
+                  lex.putBackToken( token );
+                  Node second = parseStatements();
+                  return new Node( "def", funcName, first, second, null );
+               }
+            }
+            else{
+               lex.putBackToken( token );
+            }
+
+         }
+      }
+
+   }
+
+   private Node parseParams(){
+      
    }
 
    private Node parseStatements() {

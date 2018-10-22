@@ -35,7 +35,8 @@ public class Parser {
    }
 
    private Node parseFuncCall(){
-      return new Node( "def", "hi", null, null, null );
+      System.exit(1);
+      return null;
    }
 
    private Node parseFuncDefs(){
@@ -87,11 +88,13 @@ public class Parser {
 
          }
       }
-      return new Node( "def", "are", null, null, null );
+      System.exit(1);
+      return null;
    }
 
    private Node parseParams(){
-      return new Node( "def", "how", null, null, null );
+      System.exit(1);
+      return null;
    }
 
    private Node parseStatements() {

@@ -1,4 +1,6 @@
-print "enter a:"
+/* Comment Test */
+
+"enter a:"
 
 a = input()
 

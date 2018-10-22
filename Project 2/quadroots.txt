@@ -1,6 +1,6 @@
 /* Comment Test */
 
-print "enter a:"
+"enter a:"
 
 a = input()
 

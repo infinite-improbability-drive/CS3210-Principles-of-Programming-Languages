@@ -35,7 +35,7 @@ public class Parser {
    }
 
    private Node parseFuncCall(){
-
+      return new Node( "def", "hi", null, null, null );
    }
 
    private Node parseFuncDefs(){
@@ -57,41 +57,41 @@ public class Parser {
 
    private Node parseFuncDef(){
 
-      string funcName = lex.getNextToken();
-      if( lex.getNextToken == "(" ){
-         if( lex.getNextToken == ")" ) {
-            if ( lex.getNextToken == "end" ) {
-               return new Node( "def", funcName, null, null, null );
+      Token t = lex.getNextToken();
+      if( lex.getNextToken().equals("(")){
+         if( lex.getNextToken().equals(")")) {
+            if ( lex.getNextToken().equals("end")) {
+               return new Node( "def", t.getKind(), null, null, null );
             } else {
-               lex.putBackToken( token );
+               lex.putBackToken( t );
                Node first = parseStatements();
-               return new Node( "def", funcName, first, null, null );
+               return new Node( "def", t.getKind(), first, null, null );
             }
          }
          else{
-            lex.putBackToken( token );
+            lex.putBackToken( t );
             Node first = parseParams();
 
-            if( lex.getNextToken == ")" ) {
-               if (lex.getNextToken == "end" ) {
-                  return Node("def", funcName, first, null, null );
+            if( lex.getNextToken().equals(")")) {
+               if (lex.getNextToken().equals("end")) {
+                  return new Node("def", t.getKind(), first, null, null );
                } else {
-                  lex.putBackToken( token );
+                  lex.putBackToken( t );
                   Node second = parseStatements();
-                  return new Node( "def", funcName, first, second, null );
+                  return new Node( "def", t.getKind(), first, second, null );
                }
             }
             else{
-               lex.putBackToken( token );
+               lex.putBackToken( t );
             }
 
          }
       }
-
+      return new Node( "def", "are", null, null, null );
    }
 
    private Node parseParams(){
-      
+      return new Node( "def", "how", null, null, null );
    }
 
    private Node parseStatements() {

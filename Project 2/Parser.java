@@ -58,14 +58,14 @@ public class Parser {
    private Node parseFuncDef(){
 
       Token t = lex.getNextToken();
-      if( lex.getNextToken().equals("(")){
-         if( lex.getNextToken().equals(")")) {
+      if( lex.getNextToken().getDetails().equals("(")){
+         if( lex.getNextToken().getDetails().equals(")")) {
             if ( lex.getNextToken().equals("end")) {
-               return new Node( "def", t.getKind(), null, null, null );
+               return new Node( "def", t.getDetails(), null, null, null );
             } else {
                lex.putBackToken( t );
                Node first = parseStatements();
-               return new Node( "def", t.getKind(), first, null, null );
+               return new Node( "def", t.getDetails(), first, null, null );
             }
          }
          else{
@@ -74,11 +74,11 @@ public class Parser {
 
             if( lex.getNextToken().equals(")")) {
                if (lex.getNextToken().equals("end")) {
-                  return new Node("def", t.getKind(), first, null, null );
+                  return new Node("def", t.getDetails(), first, null, null );
                } else {
                   lex.putBackToken( t );
                   Node second = parseStatements();
-                  return new Node( "def", t.getKind(), first, second, null );
+                  return new Node( "def", t.getDetails(), first, second, null );
                }
             }
             else{

@@ -195,13 +195,51 @@ public class Parser {
          Node first = parseExpr();
          return new Node( "sto", varName, first, null, null );
       }
+
+      // --------------->>>   <funcCall>
+      else if (token.isKind("funcCall")) {}
+
+      // --------------->>>   if <expr> else end
+      else if (token.isKind("if")) {
+         parseExpr();
+         if (token.isKind("else")) {
+            // --------------->>>   if <expr> else end
+            if (token.isKind("end")) {
+               // return Node;
+            }
+         }
+         else if (token.isKind("statements")) {
+            parseStatements();
+            if (token.isKind("else")) {
+               // --------------->>>   if <expr> <statements> else end
+               if (token.isKind("end")) {
+                  // return Node
+               }
+               // --------------->>>   if <expr> <statements> else <statements> end
+               else if (token.isKind("statements")) {
+                  if (token.isKind("end")) {
+                     // return Node
+                  }
+               }
+            }
+         }
+         else {
+            System.exit(1);
+            return null;
+         }
+      }
+
+      // --------------->>>   return <expr>
+      else if (token.isKind("return")) {
+         parseExpr();
+      }
       else {
          System.out.println("Token " + token + 
                              " can't begin a statement");
          System.exit(1);
          return null;
       }
- 
+      return null;
    }// <statement>
 
    private Node parseExpr() {

@@ -123,7 +123,24 @@ public class Parser {
       return null;
    }
 
+
+   //<params> -> <var> | <var> , <params>
    private Node parseParams(){
+      System.out.println("-----> parsing <params>");
+
+      Token t = lex.getNextToken();
+
+      if ( t.isKind("var") ) {
+         Node first = new Node("var", t.getDetails(), null, null, null);
+         Token r = lex.getNextToken();
+         if (r.matches("single", ")")) {
+            return new Node("params", first, null, null);
+         }
+         else if (t.matches("single", ",")) {
+            Node second = parseParams();
+            return new Node("params", first, second, null);
+         }
+      }
       System.exit(1);
       return null;
    }

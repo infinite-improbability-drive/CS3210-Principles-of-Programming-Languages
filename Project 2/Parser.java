@@ -42,13 +42,31 @@ public class Parser {
 
             }
             else {
+               lex.putBackToken(t);
                Node first = parseArgs();
-               return new Node("funcall", t.getDetails(), first, null, null);
+               return new Node("funcCall", t.getDetails(), first, null, null);
 
             }
          }
       }
       System.exit(1);
+      return null;
+   }
+
+   private Node parseArgs(){
+      Node first = parseExpr();
+      Token t = lex.getNextToken();
+      if(t.matches("single", ")")){
+         return new Node("args",  first, null, null);
+      }
+      else if(t.matches("single", ",")){
+         Node second = parseArgs();
+         return new Node("args", first, second, null);
+      }
+      else{
+         //figuring out if we need a third check.
+      }
+
       return null;
    }
 

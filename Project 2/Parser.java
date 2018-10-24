@@ -47,6 +47,15 @@ public class Parser {
                return new Node("funcCall", t.getDetails(), first, null, null);
 
             }
+               return new Node ("funcCall", t.getDetails(),null, null, null);
+            }
+
+            else {
+               lex.putBackToken(t);
+               Node second = parseArgs();
+               return new Node("funcCall", t.getDetails(), null, second, null);
+
+            }
          }
       }
       System.exit(1);
@@ -115,10 +124,31 @@ public class Parser {
             }
             else{
                lex.putBackToken( t );
+      Token f = lex.getNextToken();
+      Token y = lex.getNextToken();
+      Token x = lex.getNextToken();
+      if(t.getDetails().equals("def") && f.isKind("var")) {
+         if (y.getDetails().equals("(") && x.getDetails().equals(")"))
+         {
+            if (lex.getNextToken().toString().equals("end")) {
+               return new Node("def", t.getDetails(), null, null, null);
+            } else {
+               Node second = parseStatements();
+               return new Node ("def", f.getDetails(), null, second, null);
             }
-
+         } else {
+            lex.putBackToken(x);
+            Node first = parseParams();
+            if (lex.getNextToken().toString().equals("end")) {
+               return new Node("def", t.getDetails(), first, null, null);
+            } else {
+               lex.putBackToken(x);
+               Node second = parseStatements();
+               return new Node("def", t.getDetails(), first, second, null);
+            }
          }
       }
+
       System.exit(1);
       return null;
    }
@@ -147,13 +177,13 @@ public class Parser {
 
    private Node parseStatements() {
       System.out.println("-----> parsing <statements>:");
- 
+
       Node first = parseStatement();
- 
+
       // look ahead to see if there are more statement's
       Token token = lex.getNextToken();
- 
-      if ( token.isKind("eof") ) {
+
+      if ( token.isKind("eof") || token.isKind("end") || token.isKind("else") ) {
          return new Node( "stmts", first, null, null );
       }
       else {
@@ -165,16 +195,16 @@ public class Parser {
 
    private Node parseStatement() {
       System.out.println("-----> parsing <statement>:");
- 
+
       Token token = lex.getNextToken();
- 
+
       // ---------------->>>  print <string>  or   print <expr>
       if ( token.isKind("print") ) {
          token = lex.getNextToken();
- 
+
          if ( token.isKind("string") ) {// print <string>
             return new Node( "prtstr", token.getDetails(),
-                          null, null, null );
+                    null, null, null );
          }
          else {// must be first token in <expr>
             // put back the token we looked ahead at
@@ -182,7 +212,7 @@ public class Parser {
             Node first = parseExpr();
             return new Node( "prtexp", first, null, null );
          }
-      // ---------------->>>  newline
+         // ---------------->>>  newline
       }
       else if ( token.isKind("newline") ) {
          return new Node( "nl", null, null, null );
@@ -234,8 +264,8 @@ public class Parser {
          parseExpr();
       }
       else {
-         System.out.println("Token " + token + 
-                             " can't begin a statement");
+         System.out.println("Token " + token +
+                 " can't begin a statement");
          System.exit(1);
          return null;
       }
@@ -249,10 +279,10 @@ public class Parser {
 
       // look ahead to see if there's an addop
       Token token = lex.getNextToken();
- 
+
       if ( token.matches("single", "+") ||
-           token.matches("single", "-") 
-         ) {
+              token.matches("single", "-")
+      ) {
          Node second = parseExpr();
          return new Node( token.getDetails(), first, second, null );
       }
@@ -270,10 +300,10 @@ public class Parser {
 
       // look ahead to see if there's a multop
       Token token = lex.getNextToken();
- 
+
       if ( token.matches("single", "*") ||
-           token.matches("single", "/") 
-         ) {
+              token.matches("single", "/")
+      ) {
          Node second = parseTerm();
          return new Node( token.getDetails(), first, second, null );
       }
@@ -281,7 +311,7 @@ public class Parser {
          lex.putBackToken( token );
          return first;
       }
-      
+
    }// <term>
 
    private Node parseFactor() {
@@ -307,7 +337,7 @@ public class Parser {
          errorCheck( token, "single", "(" );
          token = lex.getNextToken();
          errorCheck( token, "single", ")" );
-         
+
          return new Node( bifName, null, null, null );
       }
       else if ( token.isKind("bif1") ) {
@@ -317,7 +347,7 @@ public class Parser {
          Node first = parseExpr();
          token = lex.getNextToken();
          errorCheck( token, "single", ")" );
-         
+
          return new Node( bifName, first, null, null );
       }
       else if ( token.isKind("bif2") ) {
@@ -330,7 +360,7 @@ public class Parser {
          Node second = parseExpr();
          token = lex.getNextToken();
          errorCheck( token, "single", ")" );
-         
+
          return new Node( bifName, first, second, null );
       }
       else if ( token.matches("single","-") ) {
@@ -342,27 +372,27 @@ public class Parser {
          System.exit(1);
          return null;
       }
-      
+
    }// <factor>
 
-  // check whether token is correct kind
-  private void errorCheck( Token token, String kind ) {
-    if( ! token.isKind( kind ) ) {
-      System.out.println("Error:  expected " + token + 
-                         " to be of kind " + kind );
-      System.exit(1);
-    }
-  }
+   // check whether token is correct kind
+   private void errorCheck( Token token, String kind ) {
+      if( ! token.isKind( kind ) ) {
+         System.out.println("Error:  expected " + token +
+                 " to be of kind " + kind );
+         System.exit(1);
+      }
+   }
 
-  // check whether token is correct kind and details
-  private void errorCheck( Token token, String kind, String details ) {
-    if( ! token.isKind( kind ) || 
-        ! token.getDetails().equals( details ) ) {
-      System.out.println("Error:  expected " + token + 
-                          " to be kind=" + kind + 
-                          " and details=" + details );
-      System.exit(1);
-    }
-  }
+   // check whether token is correct kind and details
+   private void errorCheck( Token token, String kind, String details ) {
+      if( ! token.isKind( kind ) ||
+              ! token.getDetails().equals( details ) ) {
+         System.out.println("Error:  expected " + token +
+                 " to be kind=" + kind +
+                 " and details=" + details );
+         System.exit(1);
+      }
+   }
 
 }

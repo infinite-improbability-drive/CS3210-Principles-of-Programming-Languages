@@ -39,14 +39,6 @@ public class Parser {
       if( lex.getNextToken().getKind().equals("var")) {
          if (lex.getNextToken().getDetails().equals("(")) {
             if (lex.getNextToken().getDetails().equals(")")) {
-
-            }
-            else {
-               lex.putBackToken(t);
-               Node first = parseArgs();
-               return new Node("funcCall", t.getDetails(), first, null, null);
-
-            }
                return new Node ("funcCall", t.getDetails(),null, null, null);
             }
 
@@ -72,10 +64,6 @@ public class Parser {
          Node second = parseArgs();
          return new Node("args", first, second, null);
       }
-      else{
-         //figuring out if we need a third check.
-      }
-
       return null;
    }
 
@@ -99,31 +87,6 @@ public class Parser {
    private Node parseFuncDef(){
 
       Token t = lex.getNextToken();
-      if( lex.getNextToken().getDetails().equals("(")){
-         if( lex.getNextToken().getDetails().equals(")")) {
-            if ( lex.getNextToken().equals("end")) {
-               return new Node( "def", t.getDetails(), null, null, null );
-            } else {
-               lex.putBackToken( t );
-               Node first = parseStatements();
-               return new Node( "def", t.getDetails(), first, null, null );
-            }
-         }
-         else{
-            lex.putBackToken( t );
-            Node first = parseParams();
-
-            if( lex.getNextToken().equals(")")) {
-               if (lex.getNextToken().equals("end")) {
-                  return new Node("def", t.getDetails(), first, null, null );
-               } else {
-                  lex.putBackToken( t );
-                  Node second = parseStatements();
-                  return new Node( "def", t.getDetails(), first, second, null );
-               }
-            }
-            else{
-               lex.putBackToken( t );
       Token f = lex.getNextToken();
       Token y = lex.getNextToken();
       Token x = lex.getNextToken();
@@ -282,7 +245,7 @@ public class Parser {
 
       if ( token.matches("single", "+") ||
               token.matches("single", "-")
-      ) {
+              ) {
          Node second = parseExpr();
          return new Node( token.getDetails(), first, second, null );
       }
@@ -303,7 +266,7 @@ public class Parser {
 
       if ( token.matches("single", "*") ||
               token.matches("single", "/")
-      ) {
+              ) {
          Node second = parseTerm();
          return new Node( token.getDetails(), first, second, null );
       }

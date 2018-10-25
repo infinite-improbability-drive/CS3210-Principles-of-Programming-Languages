@@ -24,12 +24,12 @@ public class Parser {
       Token token = lex.getNextToken();
 
       if( token.isKind( "eof") ){
-         return new Node( "defs", first, null, null );
+         return new Node( "program", first, null, null );
       }
       else{
          lex.putBackToken( token );
          Node second = parseFuncDefs();
-         return new Node( "def", first, second, null );
+         return new Node( "program", first, second, null );
       }
 
    }

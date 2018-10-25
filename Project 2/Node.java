@@ -164,8 +164,8 @@ public class Node {
          table.store( info, value );
       }
 
-//      else if ( kind.equals("def")) {
-//      }
+      else if ( kind.equals("def")) {
+      }
 
       else if ( kind.equals("ifelse") ) {
           double bool = first.evaluate();

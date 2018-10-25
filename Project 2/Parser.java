@@ -74,12 +74,12 @@ public class Parser {
       Token token = lex.getNextToken();
 
       if( token.isKind( "eof" ) ){
-         return new Node( "def", first, null, null );
+         return new Node( "funcDefs", first, null, null );
       }
       else{
          lex.putBackToken( token );
          Node second = parseFuncDefs();
-         return new Node( "def", first, second, null );
+         return new Node( "funcDefs", first, second, null );
       }
 
    }
@@ -94,20 +94,20 @@ public class Parser {
          if (y.getDetails().equals("(") && x.getDetails().equals(")"))
          {
             if (lex.getNextToken().toString().equals("end")) {
-               return new Node("def", t.getDetails(), null, null, null);
+               return new Node("funcDef", t.getDetails(), null, null, null);
             } else {
                Node second = parseStatements();
-               return new Node ("def", f.getDetails(), null, second, null);
+               return new Node ("funcDef", f.getDetails(), null, second, null);
             }
          } else {
             lex.putBackToken(x);
             Node first = parseParams();
             if (lex.getNextToken().toString().equals("end")) {
-               return new Node("def", t.getDetails(), first, null, null);
+               return new Node("funcDef", t.getDetails(), first, null, null);
             } else {
                lex.putBackToken(x);
                Node second = parseStatements();
-               return new Node("def", t.getDetails(), first, second, null);
+               return new Node("funcDef", t.getDetails(), first, second, null);
             }
          }
       }

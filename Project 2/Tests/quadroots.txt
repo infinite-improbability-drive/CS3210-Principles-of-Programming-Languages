@@ -18,6 +18,6 @@ def main()
    x2 = (-b + sqrt(disc) ) / (2*a)
 
    "x1: "    print(x1) "\n"
-   "x2: "    print(x2 ) "\n"
+   "x2: "    print(x2) "\n"
 
 end

@@ -112,7 +112,7 @@ public class Parser {
          }
       }
 
-      System.exit(1);
+      // System.exit(1);
       return null;
    }
 
@@ -194,11 +194,13 @@ public class Parser {
 
       // --------------->>>   if <expr> else end
       else if (token.isKind("if")) {
-         parseExpr();
-         if (token.isKind("else")) {
+         Node first = parseExpr();
+         Token t = lex.getNextToken();
+         if (t.isKind("else")) {
             // --------------->>>   if <expr> else end
+
             if (token.isKind("end")) {
-               // return Node;
+               // return Node("ifelse", first, null, null);
             }
          }
          else if (token.isKind("statements")) {

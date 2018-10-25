@@ -163,7 +163,22 @@ public class Node {
          double value = first.evaluate();
          table.store( info, value );
       }
-      
+
+//      else if ( kind.equals("def")) {
+//      }
+
+      else if ( kind.equals("ifelse") ) {
+          double bool = first.evaluate();
+          if (bool == 1) {
+              second.execute();
+          }
+          else {
+              if (third.kind.equals("statements")) {
+                  third.execute();
+              }
+          }
+      }
+
       else {
          error("Unknown kind of node [" + kind + "]");     
       }

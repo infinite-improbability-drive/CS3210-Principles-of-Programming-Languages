@@ -192,30 +192,48 @@ public class Parser {
       // --------------->>>   <funcCall>
       else if (token.isKind("funcCall")) {}
 
-      // --------------->>>   if <expr> else end
+      // --------------->>>   if/else
       else if (token.isKind("if")) {
          Node first = parseExpr();
          Token t = lex.getNextToken();
          if (t.isKind("else")) {
-            // --------------->>>   if <expr> else end
+            t = lex.getNextToken();
 
-            if (token.isKind("end")) {
-               // return Node("ifelse", first, null, null);
+            // --------------->>>   if <expr> else end
+            if (t.isKind("end")) {
+               return new Node("ifelse", first, null, null);
             }
+
+            // --------------->>>   if <expr> else <statements> end
+            else if (t.isKind("statements")) {
+               Node second = parseStatements();
+               t = lex.getNextToken();
+               if (t.isKind("end")) {
+                  return new Node("ifelse", first, second, null);
+               }
+            }
+
          }
          else if (token.isKind("statements")) {
-            parseStatements();
-            if (token.isKind("else")) {
+            Node second = parseStatements();
+            t = lex.getNextToken();
+            if (t.isKind("else")) {
+               t = lex.getNextToken();
+
                // --------------->>>   if <expr> <statements> else end
-               if (token.isKind("end")) {
-                  // return Node
+               if (t.isKind("end")) {
+                  return new Node("ifelse", first, second, null);
                }
+
                // --------------->>>   if <expr> <statements> else <statements> end
-               else if (token.isKind("statements")) {
-                  if (token.isKind("end")) {
-                     // return Node
+               else if (t.isKind("statements")) {
+                  Node third = parseStatements();
+                  t = lex.getNextToken();
+                  if (t.isKind("end")) {
+                     return new Node("ifelse", first, second, third);
                   }
                }
+
             }
          }
          else {

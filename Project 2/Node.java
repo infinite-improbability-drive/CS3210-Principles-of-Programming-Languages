@@ -145,6 +145,10 @@ public class Node {
             }
          }
       }
+      else if ( kind.equals("program")) {
+          double value = first.evaluate();
+          System.out.print(value);
+      }
 
       else if ( kind.equals("prtstr") ) {
          System.out.print( info );

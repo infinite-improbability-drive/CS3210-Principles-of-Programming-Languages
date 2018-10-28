@@ -150,6 +150,11 @@ public class Node {
           System.out.print(value);
       }
 
+      else if ( kind.equals("funcCall")) {
+          double value = first.evaluate();
+          System.out.print(value);
+      }
+
       else if ( kind.equals("prtstr") ) {
          System.out.print( info );
       }

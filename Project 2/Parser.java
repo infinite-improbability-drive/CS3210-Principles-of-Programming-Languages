@@ -161,7 +161,7 @@ public class Parser {
       // look ahead to see if there are more statement's
       Token token = lex.getNextToken();
 
-      if ( token.isKind("eof") || token.isKind("end") || token.isKind("else") ) {
+      if ( token.isKind("eof") || token.matches("var","end") || token.matches("var", "else") ) {
          return new Node( "stmts", first, null, null );
       }
       else {
@@ -179,8 +179,8 @@ public class Parser {
       // ---------------->>>  print <string>  or   print <expr>
       if ( token.isKind("print") ) {
          token = lex.getNextToken();
-
-         if ( token.isKind("expr") ) {// print <string>
+         Token tok = lex.getNextToken();
+         if ( token.matches("single", "(") && tok.isKind("exprs") ) {// print <string>
             lex.putBackToken( token );
             Node first = parseExpr();
             return new Node( "prtexp", first, null, null );
@@ -194,16 +194,26 @@ public class Parser {
          return new Node( "nl", null, null, null );
       }
       // --------------->>>   <var> = <expr>
+      else if(token.isKind("single")){
+         Node first = parseExpr();
+         return new Node("statements", token.getDetails(), first, null, null);
+      }
       else if ( token.isKind("var") ) {
          String varName = token.getDetails();
          token = lex.getNextToken();
-         errorCheck( token, "single", "=" );
-         Node first = parseExpr();
-         return new Node( "sto", varName, first, null, null );
+         if(token.matches("single", "(")){
+            Node first = parseFuncCall();
+            return new Node("statement", first, null, null);
+         }
+         else {
+            errorCheck(token, "single", "=");
+            Node first = parseExpr();
+            return new Node("sto", varName, first, null, null);
+         }
       }
 
       // --------------->>>   <funcCall>
-      else if (token.isKind("funcCall")) {}
+      else if (token.isKind("funcCall")) {} //dont think we need this
 
       // --------------->>>   if/else
       else if (token.isKind("if")) {

@@ -25,6 +25,11 @@ public class Node {
 
   private static Scanner keys = new Scanner( System.in );
 
+
+  // return value
+  private static double retVal;
+  private static boolean retBool;
+
   // construct a common node with no info specified
   public Node( String k, Node one, Node two, Node three ) {
     kind = k;  info = "";  
@@ -188,6 +193,11 @@ public class Node {
           }
       }
 
+      else if (kind.equals("return")) {
+          retVal = first.evaluate();
+          retBool = true;
+      }
+
       else {
          error("Unknown kind of node [" + kind + "]");     
       }
@@ -256,6 +266,14 @@ public class Node {
        else if ( kind.equals("opp") ) {
           double value = first.evaluate();
           return -value;
+       }
+
+       else if ( kind.equals("funcCall") ) {
+          if (second != null) {
+              return retVal;
+          }
+          retBool = false;
+          return retVal;
        }
 
        else {

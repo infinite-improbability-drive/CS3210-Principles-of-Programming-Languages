@@ -216,22 +216,26 @@ public class Parser {
       else if (token.isKind("funcCall")) {} //dont think we need this
 
       // --------------->>>   if/else
-      else if (token.isKind("if")) {
+      else if (token.matches("var", "if")) {
+         Token r = lex.getNextToken();
+         errorCheck(r, "single", "(");
          Node first = parseExpr();
+         Token s = lex.getNextToken();
+         errorCheck(s, "single", ")");
          Token t = lex.getNextToken();
-         if (t.isKind("else")) {
+         if (t.matches("var", "else")) {
             t = lex.getNextToken();
 
             // --------------->>>   if <expr> else end
-            if (t.isKind("end")) {
+            if (t.matches("var", "end")) {
                return new Node("ifelse", first, null, null);
             }
 
             // --------------->>>   if <expr> else <statements> end
-            else if (t.isKind("statements")) {
+            else if (t.matches("var", "statements")) {
                Node second = parseStatements();
                t = lex.getNextToken();
-               if (t.isKind("end")) {
+               if (t.matches("var", "end")) {
                   return new Node("ifelse", first, second, null);
                }
             }

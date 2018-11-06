@@ -152,20 +152,25 @@ public class Node {
          }
       }
       else if ( kind.equals("program")) {
-          double value = first.evaluate();
-          System.out.print(value);
+          funcRoot = second;
+          first.evaluate();
       }
 
-      else if ( kind.equals("funcCall")) {
-          double value = first.evaluate();
-          System.out.print(value);
+      else if ( kind.equals("funcDef")) {
+          paramNode = first;
+          while (argNode != null && paramNode != null) {
+              table.store(paramNode.first.info, argNode.first.evaluate());
+              if (paramNode != null) { paramNode = paramNode.second;}
+              if (argNode != null)   { argNode = argNode.second;}
+          }
+          second.execute();
       }
 
       else if ( kind.equals("prtstr") ) {
          System.out.print( info );
       }
       
-      else if ( kind.equals("prtexp") ) {
+      else if ( kind.equals("print") ) {
          double value = first.evaluate();
          System.out.print( value );
       }
@@ -270,7 +275,17 @@ public class Node {
        }
 
        else if ( kind.equals("funcCall") ) {
+          boolean foundOne = false, end = false;
           argNode = first;
+          // find and execute funcDef
+          Node tmp = funcRoot;
+          while (!foundOne && !end) {
+            if (info.equals(tmp.first.info)) { foundOne = true; tmp.first.execute();}
+            else {
+                if (tmp.second != null) {tmp = tmp.second;}
+                else {end = true;}
+            }
+          }
           // find and execute funcDef
           retBool = false;
           return retVal;

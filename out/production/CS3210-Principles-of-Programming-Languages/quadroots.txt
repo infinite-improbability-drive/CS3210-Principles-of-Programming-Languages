@@ -1,18 +1,21 @@
-/* Comment Test */
+main()
 
-"enter a:"
+def main()
 
-a = input()
+    "enter a:"
+    a = input()
 
-print "enter b:"
-b = input()
-print "enter c:"
-c = input()
+    "enter b:"
+    b = input()
 
-disc = pow(b,2) - 4*a*c
+    "enter c:"
+    c = input()
 
-x1 = (-b - sqrt(disc) ) / (2*a)
-x2 = (-b + sqrt(disc) ) / (2*a)
+    disc = pow(b,2) - 4*a*c
 
-print "x1: "    print x1    newline
-print "x2: "    print x2    newline
+    x1 = (-b - sqrt(disc) ) / (2*a)
+    x2 = (-b + sqrt(disc) ) / (2*a)
+
+    "x1: "    print(x1) nl
+    "x2: "    print(x2) nl
+end

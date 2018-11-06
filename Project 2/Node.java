@@ -29,6 +29,7 @@ public class Node {
   // return value
   private static double retVal;
   private static boolean retBool;
+  private Node funcRoot, paramNode, argNode;
 
   // construct a common node with no info specified
   public Node( String k, Node one, Node two, Node three ) {
@@ -269,9 +270,7 @@ public class Node {
        }
 
        else if ( kind.equals("funcCall") ) {
-          if (second != null) {
-              return retVal;
-          }
+          argNode = first;
           retBool = false;
           return retVal;
        }

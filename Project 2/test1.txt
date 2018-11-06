@@ -19,7 +19,3 @@ def main()
        "x1: "    print(x1) nl
        "x2: "    print(x2) nl
 end
-
-def butts()
-
-end

@@ -5,3 +5,10 @@
    [#t (cons x list)]
    )
  )
+ 
+ (define (sort list)
+ (cond
+   [(null? list) list]
+   [#t (insert (car list) (sort (cdr list)))]
+ )
+)

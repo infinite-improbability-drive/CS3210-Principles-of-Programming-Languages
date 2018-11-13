@@ -105,11 +105,11 @@ public class Parser {
       Token y = lex.getNextToken();
       Token x = lex.getNextToken();
       Token z = lex.getNextToken();
-      System.out.println("t = " + t.getDetails());
-      System.out.println("f = " + f.getDetails());
-      System.out.println("y = " + y.getDetails());
-      System.out.println("x = " + x.getDetails());
-      System.out.println("z = " + z.getDetails());
+//      System.out.println("t = " + t.getDetails());
+//      System.out.println("f = " + f.getDetails());
+//      System.out.println("y = " + y.getDetails());
+//      System.out.println("x = " + x.getDetails());
+//      System.out.println("z = " + z.getDetails());
       if (t.getDetails().equals("def") && f.isKind("var")) {
          if (y.getDetails().equals("(") && x.getDetails().equals(")")) {
             if (z.getDetails().equals("end")) {
@@ -131,7 +131,7 @@ public class Parser {
                return new Node("funcDef", f.getDetails(), first, null, null);
             }
             else {
-               lex.putBackToken(x);
+               // lex.putBackToken(x);
                Node second = parseStatements();
                // def <var> ( <params> ) <statements> end
                return new Node("funcDef", f.getDetails(), first, second, null);
@@ -154,21 +154,24 @@ public class Parser {
        Token token = lex.getNextToken();
 
        if ( token.isKind( "var")) {
-           lex.putBackToken( token );
-           Node second = parseParams();
-           return new Node( "params", first, second, null );
-       }
-       else if ( token.matches( "single", ",")) {
            // lex.putBackToken( token );
            Node second = parseParams();
            return new Node( "params", first, second, null );
        }
+       else if ( token.matches( "single", ",")) {
+           lex.getNextToken();
+           Node second = parseParams();
+           return new Node( "params", first, second, null );
+       }
        else {
+           // lex.putBackToken( t );
+           lex.putBackToken( token );
            return new Node( "params", first, null, null );
        }
       // System.exit(1);
       // return null;
-   }
+   } // <params>
+
 
    // <statements> -> <statement> |
    //                 <statement> <statements>
@@ -189,6 +192,7 @@ public class Parser {
          return new Node( "stmts", first, second, null );
       }
    } // <statements>
+
 
    // <statement> ->  <string> |
    //                 <var> = <expr> |

@@ -216,11 +216,12 @@ public class Parser {
             Node first = parseExpr();
             return new Node( "prtexp", first, null, null );
          }
-         // ---------------->>>  newline
+
       }
       else if ( token.isKind("string") ) {
          return new Node( "prtstr", token.getDetails(), null, null, null );
       }
+      // ---------------->>>  newline
       else if ( token.isKind("newline") ) {
          return new Node( "nl", null, null, null );
       }
@@ -314,6 +315,8 @@ public class Parser {
       return null;
    } // <statement>
 
+
+   // <expr> -> <term> | <term> + <expr> | <term> - <expr>
    private Node parseExpr() {
       System.out.println("-----> parsing <expr>");
 

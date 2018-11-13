@@ -1,0 +1,6 @@
+#lang racket (define (firstTour j x)
+  (cond
+    [(= j x) (cons x '())]
+    [(cons j(firstTour(+ j 1)x))]
+    )
+  )

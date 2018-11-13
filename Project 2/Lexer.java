@@ -200,10 +200,10 @@ public class Lexer {
                 return new Token( "bif0", data );
             }
             else if ( data.equals("if") ) {
-                return new Token( "if", data );
+                return new Token( "var", data );
             }
             else if ( data.equals("else") ) {
-                return new Token( "else", data );
+                return new Token( "var", data );
             }
             else {// is just a variable
                return new Token( "var", data );

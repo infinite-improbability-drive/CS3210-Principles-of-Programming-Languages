@@ -1,8 +1,8 @@
 main()
 
-def fact( n )
+def fact( n , o , p , q , r , s , t , u , v)
 
-   if lt(n 1) 
+   if lt(n 1)
       return 1
    else
       temp = fact( n-1 )

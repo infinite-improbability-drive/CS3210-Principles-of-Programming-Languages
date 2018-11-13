@@ -124,6 +124,7 @@ public class Parser {
             }
          }
          else {
+            lex.putBackToken(z);
             lex.putBackToken(x);
             Node first = parseParams();
             if (lex.getNextToken().toString().equals("end")) {
@@ -147,29 +148,42 @@ public class Parser {
    private Node parseParams(){
       System.out.println("-----> parsing <params>");
 
-       Token t = lex.getNextToken();
-       Node first = new Node("var", t.getDetails(), null, null, null);
+      Token s = lex.getNextToken();
+      Node first = new Node("var", s.getDetails(), null, null, null);
+      Token t = lex.getNextToken();
+      if (t.matches("single", ")")){
+         return new Node("params",  first, null, null);
+      }
+     else if (t.matches("single", ",")){
+         Node second = parseParams();
+         return new Node("params", first, second, null);
+      }
+      return null;
 
-       //look ahead to see if there are more params
-       Token token = lex.getNextToken();
-
-       if ( token.isKind( "var")) {
-           // lex.putBackToken( token );
-           Node second = parseParams();
-           return new Node( "params", first, second, null );
-       }
-       else if ( token.matches( "single", ",")) {
-           lex.getNextToken();
-           Node second = parseParams();
-           return new Node( "params", first, second, null );
-       }
-       else {
-           // lex.putBackToken( t );
-           lex.putBackToken( token );
-           return new Node( "params", first, null, null );
-       }
-      // System.exit(1);
-      // return null;
+//       Token t = lex.getNextToken();
+//
+//       Node first = new Node("var", t.getDetails(), null, null, null);
+//
+//       //look ahead to see if there are more params
+//       Token token = lex.getNextToken();
+//
+//       if ( token.isKind( "var")) {
+//           // lex.putBackToken( token );
+//           Node second = parseParams();
+//           return new Node( "params", first, second, null );
+//       }
+//       else if ( token.matches( "single", ",")) {
+//           lex.getNextToken();
+//           Node second = parseParams();
+//           return new Node( "params", first, second, null );
+//       }
+//       else {
+//           // lex.putBackToken( t );
+//           lex.putBackToken( token );
+//           return new Node( "params", first, null, null );
+//       }
+//      // System.exit(1);
+//      // return null;
    } // <params>
 
 

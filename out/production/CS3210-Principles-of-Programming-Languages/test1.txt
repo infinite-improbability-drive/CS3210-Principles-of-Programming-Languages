@@ -1,7 +1,3 @@
-main()
-
-def main()
-
-    "hello world"
-
-end
+4 1
+27 0
+26

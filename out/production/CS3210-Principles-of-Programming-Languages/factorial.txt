@@ -1,6 +1,6 @@
 main()
 
-def fact( n , o , p , q , r , s , t , u , v)
+def fact( n )
 
    if lt(n 1)
       return 1

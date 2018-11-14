@@ -100,27 +100,27 @@ public class Parser {
    //               def <var> ( <params> ) <statements> end
    private Node parseFuncDef(){
       System.out.println("-----> parsing <funcDef>");
-      Token t = lex.getNextToken();
-      Token f = lex.getNextToken();
+      Token v = lex.getNextToken();
+      Token w = lex.getNextToken();
       Token y = lex.getNextToken();
       Token x = lex.getNextToken();
       Token z = lex.getNextToken();
-//      System.out.println("t = " + t.getDetails());
-//      System.out.println("f = " + f.getDetails());
+//      System.out.println("v = " + t.getDetails());
+//      System.out.println("w = " + f.getDetails());
 //      System.out.println("y = " + y.getDetails());
 //      System.out.println("x = " + x.getDetails());
 //      System.out.println("z = " + z.getDetails());
-      if (t.getDetails().equals("def") && f.isKind("var")) {
+      if (v.getDetails().equals("def") && w.isKind("var")) {
          if (y.getDetails().equals("(") && x.getDetails().equals(")")) {
             if (z.getDetails().equals("end")) {
                // def <var> ( ) end
-               return new Node("funcDef", f.getDetails(), null, null, null);
+               return new Node("funcDef", w.getDetails(), null, null, null);
             }
             else {
                lex.putBackToken(z);
                Node second = parseStatements();
                // def <var> ( ) <statements> end
-               return new Node ("funcDef", f.getDetails(), null, second, null);
+               return new Node ("funcDef", w.getDetails(), null, second, null);
             }
          }
          else {
@@ -129,13 +129,13 @@ public class Parser {
             Node first = parseParams();
             if (lex.getNextToken().toString().equals("end")) {
                // def <var> ( <params> ) end
-               return new Node("funcDef", f.getDetails(), first, null, null);
+               return new Node("funcDef", w.getDetails(), first, null, null);
             }
             else {
                // lex.putBackToken(x);
                Node second = parseStatements();
                // def <var> ( <params> ) <statements> end
-               return new Node("funcDef", f.getDetails(), first, second, null);
+               return new Node("funcDef", w.getDetails(), first, second, null);
             }
          }
       }

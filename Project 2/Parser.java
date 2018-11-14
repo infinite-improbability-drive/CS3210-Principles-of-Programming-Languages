@@ -159,31 +159,6 @@ public class Parser {
          return new Node("params", first, second, null);
       }
       return null;
-
-//       Token t = lex.getNextToken();
-//
-//       Node first = new Node("var", t.getDetails(), null, null, null);
-//
-//       //look ahead to see if there are more params
-//       Token token = lex.getNextToken();
-//
-//       if ( token.isKind( "var")) {
-//           // lex.putBackToken( token );
-//           Node second = parseParams();
-//           return new Node( "params", first, second, null );
-//       }
-//       else if ( token.matches( "single", ",")) {
-//           lex.getNextToken();
-//           Node second = parseParams();
-//           return new Node( "params", first, second, null );
-//       }
-//       else {
-//           // lex.putBackToken( t );
-//           lex.putBackToken( token );
-//           return new Node( "params", first, null, null );
-//       }
-//      // System.exit(1);
-//      // return null;
    } // <params>
 
 
@@ -246,8 +221,12 @@ public class Parser {
       }
       else if ( token.isKind("var") ) {
          String varName = token.getDetails();
+         if (token.matches("var", "return")){
+            Node first = parseExpr();
+            return new Node("statement", first, null, null);
+         }
          token = lex.getNextToken();
-         if(token.matches("single", "(")){
+         if (token.matches("single", "(")){
             Node first = parseFuncCall();
             return new Node("statement", first, null, null);
          }
@@ -318,7 +297,7 @@ public class Parser {
       // --------------->>>   return <expr>
       else if (token.isKind("return")) {
          Node first = parseExpr();
-         return new Node("return", first, null, null);
+         return new Node("stmt", first, null, null);
       }
       else {
          System.out.println("Token " + token +

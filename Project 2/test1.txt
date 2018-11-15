@@ -1,7 +1,13 @@
 main()
 
-def main()
+def fact( n )
 
     "hello world"
+
+end
+
+def main()
+
+  fact(n)
 
 end

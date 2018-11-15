@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a84e6708-1ce0-47e7-9a72-e46a603b91d9" name="Default Changelist" comment="All 11/14/2018; renamed silly variables in parseFuncDef().">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/Lexer.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/Corgi.class" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/Corgi.class" />
+    <list default="true" id="a84e6708-1ce0-47e7-9a72-e46a603b91d9" name="Default Changelist" comment="All 11/14/2018; some junk">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/Lexer.class" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/Lexer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/Parser.class" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/Parser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project 2/Corgi.java" afterPath="$PROJECT_DIR$/Project 2/Corgi.java" />
@@ -11,7 +10,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project 2/Parser.java" afterPath="$PROJECT_DIR$/Project 2/Parser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project 2/factorial.txt" afterPath="$PROJECT_DIR$/Project 2/factorial.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/factorial.txt" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/factorial.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/test1.txt" afterPath="$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/test1.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,6 +18,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CheckStyle-IDEA-workspace">
+    <option name="configuration">
+      <map>
+        <entry key="last-active-plugin-version" />
+      </map>
+    </option>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="395476397">
@@ -99,32 +104,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Corgi.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Corgi.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project 2/Corgi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state relative-caret-position="329">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project 2/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="factorial.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/production/CS3210-Principles-of-Programming-Languages/factorial.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="111">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="method#parseFuncCall#0;class#Parser#0" expanded="false" />
+                <element signature="method#parseArgs#0;class#Parser#0" expanded="false" />
+                <element signature="e#3220#3272#0" expanded="false" />
+                <element signature="e#4619#4634#0" expanded="false" />
+                <element signature="e#4972#5034#0" expanded="false" />
+                <element signature="method#parseParams#0;class#Parser#0" expanded="false" />
+                <element signature="method#parseExpr#0;class#Parser#0" expanded="false" />
+                <element signature="method#parseTerm#0;class#Parser#0" expanded="false" />
+                <element signature="method#parseFactor#0;class#Parser#0" expanded="false" />
+                <element signature="method#errorCheck#0;class#Parser#0" expanded="false" />
+                <element signature="method#errorCheck#1;class#Parser#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,9 +139,13 @@
       <file leaf-file-name="Token.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project 2/Token.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-              <folding />
+            <state relative-caret-position="94">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="e#218#219#0" expanded="true" />
+                <element signature="e#452#453#0" expanded="true" />
+                <element signature="e#503#504#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,8 +153,8 @@
       <file leaf-file-name="corgiCFG.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project 2/corgiCFG.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -159,21 +170,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="factorial.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project 2/factorial.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Lexer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project 2/Lexer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="200" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+            <state relative-caret-position="118">
+              <caret line="239" column="0" lean-forward="false" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -199,13 +200,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="factorial.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project 2/factorial.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>system.out.print</find>
-      <find>getnextToken</find>
-      <find>token</find>
       <find>are</find>
       <find>&quot;hi&quot;</find>
       <find>input</find>
@@ -232,6 +240,9 @@
       <find>put back token</find>
       <find>error</find>
       <find>parseFuncDef</find>
+      <find>parseStatements</find>
+      <find>Node parseStatement</find>
+      <find>return</find>
       <find>&quot;return&quot;</find>
     </findStrings>
     <replaceStrings>
@@ -270,8 +281,8 @@
         <option value="$PROJECT_DIR$/Project 2/Node.java" />
         <option value="$PROJECT_DIR$/Project 2/helloworld.txt" />
         <option value="$PROJECT_DIR$/Project 2/test1.txt" />
-        <option value="$PROJECT_DIR$/Project 2/Lexer.java" />
         <option value="$PROJECT_DIR$/Project 2/factorial.txt" />
+        <option value="$PROJECT_DIR$/Project 2/Lexer.java" />
         <option value="$PROJECT_DIR$/Project 2/Corgi.java" />
         <option value="$PROJECT_DIR$/Project 2/Parser.java" />
       </list>
@@ -285,10 +296,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-15" />
+    <option name="width" value="3060" />
+    <option name="height" value="2055" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -319,20 +329,7 @@
             <path>
               <item name="CS3210-Principles-of-Programming-Languages" type="b2602c69:ProjectViewProjectNode" />
               <item name="CS3210-Principles-of-Programming-Languages" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS3210-Principles-of-Programming-Languages" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS3210-Principles-of-Programming-Languages" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS3210-Principles-of-Programming-Languages" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS3210-Principles-of-Programming-Languages" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="CS3210-Principles-of-Programming-Languages" type="462c0819:PsiDirectoryNode" />
+              <item name="Project 2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -950,11 +947,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542232293728</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="All 11/14/2018; some junk">
+      <created>1542239473050</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1542239473050</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6178000" />
+    <option name="totallyTimeSpent" value="12620000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -966,29 +970,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
+    <frame x="-5" y="0" width="1020" height="685" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19739293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19622642" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.273743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2773585" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21035598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43771043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3594041" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3754717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1080,19 +1084,20 @@
     <MESSAGE value="John^2, Nick, Peter: fixed quadroots.txt" />
     <MESSAGE value="All: Nick fix'd parseParam tyvm" />
     <MESSAGE value="All 11/14/2018; renamed silly variables in parseFuncDef()." />
-    <option name="LAST_COMMIT_MESSAGE" value="All 11/14/2018; renamed silly variables in parseFuncDef()." />
+    <MESSAGE value="All 11/14/2018; some junk" />
+    <option name="LAST_COMMIT_MESSAGE" value="All 11/14/2018; some junk" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Project 2/Parser.java</url>
-          <line>234</line>
+          <line>303</line>
           <properties />
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1125,7 +1130,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2907">
           <caret line="171" column="10" lean-forward="false" selection-start-line="171" selection-start-column="10" selection-end-line="171" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="method#parseFuncCall#0;class#Parser#0" expanded="false" />
+            <element signature="method#parseArgs#0;class#Parser#0" expanded="false" />
+            <element signature="e#3220#3272#0" expanded="false" />
+            <element signature="e#4619#4634#0" expanded="false" />
+            <element signature="e#4972#5034#0" expanded="false" />
+            <element signature="method#parseParams#0;class#Parser#0" expanded="false" />
+            <element signature="method#parseExpr#0;class#Parser#0" expanded="false" />
+            <element signature="method#parseTerm#0;class#Parser#0" expanded="false" />
+            <element signature="method#parseFactor#0;class#Parser#0" expanded="false" />
+            <element signature="method#errorCheck#0;class#Parser#0" expanded="false" />
+            <element signature="method#errorCheck#1;class#Parser#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1133,7 +1150,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-          <folding />
+          <folding>
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1205,7 +1226,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1269,7 +1294,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2890">
           <caret line="170" column="4" lean-forward="true" selection-start-line="170" selection-start-column="4" selection-end-line="170" selection-end-column="4" />
-          <folding />
+          <folding>
+            <element signature="method#parseFuncCall#0;class#Parser#0" expanded="false" />
+            <element signature="method#parseArgs#0;class#Parser#0" expanded="false" />
+            <element signature="e#3220#3272#0" expanded="false" />
+            <element signature="e#4619#4634#0" expanded="false" />
+            <element signature="e#4972#5034#0" expanded="false" />
+            <element signature="method#parseParams#0;class#Parser#0" expanded="false" />
+            <element signature="method#parseExpr#0;class#Parser#0" expanded="false" />
+            <element signature="method#parseTerm#0;class#Parser#0" expanded="false" />
+            <element signature="method#parseFactor#0;class#Parser#0" expanded="false" />
+            <element signature="method#errorCheck#0;class#Parser#0" expanded="false" />
+            <element signature="method#errorCheck#1;class#Parser#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1382,42 +1419,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project 2/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project 2/Lexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="200" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project 2/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project 2/factorial.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project 2/corgiCFG.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1430,18 +1435,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project 2/Corgi.java">
+    <entry file="file://$PROJECT_DIR$/Project 2/corgiCFG.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        <state relative-caret-position="204">
+          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project 2/factorial.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project 2/Lexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="239" column="0" lean-forward="false" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project 2/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project 2/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
+        <state relative-caret-position="111">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="method#parseFuncCall#0;class#Parser#0" expanded="false" />
+            <element signature="method#parseArgs#0;class#Parser#0" expanded="false" />
+            <element signature="e#3220#3272#0" expanded="false" />
+            <element signature="e#4619#4634#0" expanded="false" />
+            <element signature="e#4972#5034#0" expanded="false" />
+            <element signature="method#parseParams#0;class#Parser#0" expanded="false" />
+            <element signature="method#parseExpr#0;class#Parser#0" expanded="false" />
+            <element signature="method#parseTerm#0;class#Parser#0" expanded="false" />
+            <element signature="method#parseFactor#0;class#Parser#0" expanded="false" />
+            <element signature="method#errorCheck#0;class#Parser#0" expanded="false" />
+            <element signature="method#errorCheck#1;class#Parser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project 2/Corgi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>

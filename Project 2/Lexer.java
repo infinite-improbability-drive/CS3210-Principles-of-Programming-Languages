@@ -68,7 +68,7 @@ public class Lexer {
                  state = 6;
                }
                else if ( sym == '+' || sym == '-' || sym == '*' ||
-                         sym == '/' || sym == '(' || sym == ')' ||
+                         sym == '(' || sym == ')' ||
                          sym == ',' || sym == '='
                        ) {
                   data += (char) sym;
@@ -79,6 +79,10 @@ public class Lexer {
                   state = 9;
                   done = true;
                }
+			   else if ( sym == '/'){
+				 data += (char) sym;
+				 state = 10;
+			   }
                else {
                  error("Error in lexical analysis phase with symbol "
                                       + sym + " in state " + state );
@@ -144,7 +148,30 @@ public class Lexer {
                   done = true;
                }
             }
-
+            else if (state == 10){
+                if( sym == '*'){
+                    state = 11;
+                }else{
+                    data += (char) sym;
+                    putBackSymbol( sym );
+                    return new Token ( "single", data);
+                }
+            }
+            else if (state == 11){
+                if( sym == '*'){
+                    state = 12;
+                }else{
+                    state = 11;
+                }
+            }
+            else if (state == 12) {
+                if( sym != '/') {
+                    state = 11;
+                }else{
+                    data = "";
+                    state = 1;
+                }
+            }
             // note: states 7, 8, and 9 are accepting states with
             //       no arcs out of them, so they are handled
             //       in the arc going into them
@@ -163,15 +190,24 @@ public class Lexer {
                     ) {
                return new Token( "bif1", data );
             }
-            else if ( data.equals("pow") ) {
+            else if ( data.equals("pow") || data.equals("lt") ||
+                      data.equals("le") || data.equals("eq") ||
+                      data.equals("ne") || data.equals("or") ||
+                      data.equals("and")) {
                return new Token( "bif2", data );
             }
             else if ( data.equals("print") ) {
                return new Token( "print", "" );
             }
             else if ( data.equals("newline") ) {
-               return new Token( "newline", "" );
+                return new Token( "bif0", data );
             }
+//            else if ( data.equals("if") ) {
+//                return new Token( "var", data );
+//            }
+//            else if ( data.equals("else") ) {
+//                return new Token( "var", data );
+//            }
             else {// is just a variable
                return new Token( "var", data );
             }

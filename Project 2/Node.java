@@ -25,6 +25,12 @@ public class Node {
 
   private static Scanner keys = new Scanner( System.in );
 
+
+  // return value
+  private static double retVal;
+  private static boolean retBool;
+  private static Node funcRoot, paramNode, argNode;
+
   // construct a common node with no info specified
   public Node( String k, Node one, Node two, Node three ) {
     kind = k;  info = "";  
@@ -89,7 +95,7 @@ public class Node {
   // to children
   public void draw( Camera cam, double x, double y, double h, double v ) {
 
-System.out.println("draw node " + id );
+    System.out.println("draw node " + id );
 
     // set drawing color
     cam.setColor( Color.black );
@@ -102,7 +108,7 @@ System.out.println("draw node " + id );
     // in a nice, uniform manner
     Node[] children = getChildren();
     int number = children.length;
-System.out.println("has " + number + " children");
+    System.out.println("has " + number + " children");
 
     double top = y - 0.75*v;
 
@@ -145,12 +151,26 @@ System.out.println("has " + number + " children");
             }
          }
       }
+      else if ( kind.equals("program")) {
+          funcRoot = second;
+          first.evaluate();
+      }
+
+      else if ( kind.equals("funcDef")) {
+          paramNode = first;
+          while (argNode != null && paramNode != null) {
+              table.store(paramNode.first.info, argNode.first.evaluate());
+              if (paramNode != null) { paramNode = paramNode.second;}
+              if (argNode != null)   { argNode = argNode.second;}
+          }
+          second.execute();
+      }
 
       else if ( kind.equals("prtstr") ) {
          System.out.print( info );
       }
       
-      else if ( kind.equals("prtexp") ) {
+      else if ( kind.equals("print") ) {
          double value = first.evaluate();
          System.out.print( value );
       }
@@ -163,7 +183,27 @@ System.out.println("has " + number + " children");
          double value = first.evaluate();
          table.store( info, value );
       }
-      
+
+      else if ( kind.equals("def")) {
+      }
+
+      else if ( kind.equals("ifelse") ) {
+          double bool = first.evaluate();
+          if (bool == 1) {
+              second.execute();
+          }
+          else {
+              if (third.kind.equals("statements")) {
+                  third.execute();
+              }
+          }
+      }
+
+      else if (kind.equals("return")) {
+          retVal = first.evaluate();
+          retBool = true;
+      }
+
       else {
          error("Unknown kind of node [" + kind + "]");     
       }
@@ -232,6 +272,23 @@ System.out.println("has " + number + " children");
        else if ( kind.equals("opp") ) {
           double value = first.evaluate();
           return -value;
+       }
+
+       else if ( kind.equals("funcCall") ) {
+          boolean foundOne = false, end = false;
+          argNode = first;
+          // find and execute funcDef
+          Node tmp = funcRoot;
+          while (!foundOne && !end) {
+            if (info.equals(tmp.first.info)) { foundOne = true; tmp.first.execute();}
+            else {
+                if (tmp.second != null) {tmp = tmp.second;}
+                else {end = true;}
+            }
+          }
+          // find and execute funcDef
+          retBool = false;
+          return retVal;
        }
 
        else {

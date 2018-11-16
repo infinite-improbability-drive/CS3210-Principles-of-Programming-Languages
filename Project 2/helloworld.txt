@@ -1,0 +1,7 @@
+main()
+
+def main()
+
+    "hello world"
+
+end

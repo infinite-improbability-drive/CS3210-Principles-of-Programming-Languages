@@ -151,6 +151,25 @@ public class Node {
                 }
             }
         }
+        else if(kind.equals("statement")){
+            if(first!= null) {
+                if(first.kind.equals("funcCall")){
+                    first.evaluate();
+                }
+                else {
+                    first.execute();
+                }
+            }
+            if(second!= null) {
+                if(second.kind.equals("funcCall")){
+                    second.evaluate();
+                }
+                else {
+                    second.execute();
+                }
+            }
+
+        }
         else if ( kind.equals("program")) {
             funcRoot = second;
             first.evaluate();
@@ -170,7 +189,7 @@ public class Node {
             System.out.print( info );
         }
 
-        else if ( kind.equals("print") ) {
+        else if ( kind.equals("prtexp") ) {
             double value = first.evaluate();
             System.out.print( value );
         }
@@ -193,7 +212,7 @@ public class Node {
                 second.execute();
             }
             else {
-                if (third.kind.equals("statements")) {
+                if (third.kind.equals("stmts")) {
                     third.execute();
                 }
             }

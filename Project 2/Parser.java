@@ -25,7 +25,7 @@ public class Parser {
       //look ahead to see if there are more statements
       Token token = lex.getNextToken();
 
-      if( token.matches( "eof", "") ){
+      if( token.isKind( "eof") ){
          return new Node( "program", first, null, null );
       }
       else{
@@ -84,7 +84,7 @@ public class Parser {
 
       Token token = lex.getNextToken();
 
-      if ( token.matches( "eof", "" ) ) {
+      if ( token.isKind( "eof")) {
          return new Node( "funcDefs", first, null, null );
       }
       else {

@@ -1,6 +1,6 @@
 main()
 
-def fact( n )
+def fact()
 
     "hello world"
 
@@ -8,6 +8,6 @@ end
 
 def main()
 
-  fact(n)
+  fact()
 
 end

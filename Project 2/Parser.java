@@ -51,8 +51,8 @@ public class Parser {
 
                 else {
                     lex.putBackToken(v);
-                    Node second = parseArgs();
-                    return new Node("funcCall", t.getDetails(), null, second, null);
+                    Node first = parseArgs();
+                    return new Node("funcCall", t.getDetails(), first, null, null);
 
                 }
             }
@@ -243,7 +243,7 @@ public class Parser {
             token = lex.getNextToken();
             if ( token.matches("single", "(")) {// print <string>
                 Node first = parseExpr();
-                return new Node( "prtexp", first, null, null );
+                return new Node( "print", first, null, null );
             }
 
 
@@ -296,8 +296,10 @@ public class Parser {
                 return new Node("sto", token.getDetails(), first, null, null);
             }
             else if(p.matches("single", "(")){
+                lex.putBackToken(p);
+                lex.putBackToken(token);
                 Node first = parseFuncCall();
-                return new Node("statement", first, null, null);
+                return new Node("funcCall", first, null, null);
             }
         }
 

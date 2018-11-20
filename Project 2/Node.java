@@ -163,7 +163,17 @@ public class Node {
               if (paramNode != null) { paramNode = paramNode.second;}
               if (argNode != null)   { argNode = argNode.second;}
           }
-          second.execute();
+          first.execute();
+      }
+
+      else if ( kind.equals("funcCall")) {
+          argNode = first;
+          while (argNode != null && paramNode != null) {
+              table.store(argNode.info, argNode.evaluate());
+              // if (paramNode != null) { paramNode = paramNode.second;}
+              if (argNode != null)   { argNode = argNode.second;}
+          }
+          if (first != null) { first.execute(); }
       }
 
       else if ( kind.equals("prtstr") ) {
@@ -202,6 +212,10 @@ public class Node {
       else if (kind.equals("return")) {
           retVal = first.evaluate();
           retBool = true;
+      }
+
+      else if (kind.equals("params")) {
+          first.evaluate();
       }
 
       else {

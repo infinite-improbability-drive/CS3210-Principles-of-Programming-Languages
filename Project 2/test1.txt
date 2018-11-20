@@ -1,13 +1,12 @@
 main()
 
-def fact( n )
+def fact()
 
-    "hello world"
+    a = 1 + 1;
 
 end
 
 def main()
-
-  fact(n)
+    fact()
 
 end

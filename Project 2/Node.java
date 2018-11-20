@@ -280,9 +280,14 @@ public class Node {
             // find and execute funcDef
             Node tmp = funcRoot;
             while (!foundOne && !end) {
-                if (info.equals(tmp.first.info)) { foundOne = true; tmp.first.execute();}
+                if (info.equals(tmp.first.info)){
+                    foundOne = true;
+                    tmp.first.execute();
+                }
                 else {
-                    if (tmp.second != null) {tmp = tmp.second;}
+                    if (tmp.second != null){
+                        tmp = tmp.second;
+                    }
                     else {end = true;}
                 }
             }

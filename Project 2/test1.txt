@@ -1,12 +1,7 @@
 main()
 
-def fact()
-
-    a = 1 + 1
-    print(a)
-
-end
 
 def main()
-   fact()
+   x1 = (-2 - sqrt(24) ) / (2*2)
+   "x1: "    print(x1) nl
 end

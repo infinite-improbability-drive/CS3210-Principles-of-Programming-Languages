@@ -367,8 +367,7 @@ public class Parser {
       // look ahead to see if there's a multop
       Token token = lex.getNextToken();
 
-      if ( token.matches("single", "*") ||
-              token.matches("single", "/")
+      if ( (token.matches("single", "*")) || (token.matches("single", "/ "))
       ) {
          Node second = parseTerm();
          return new Node( token.getDetails(), first, second, null );

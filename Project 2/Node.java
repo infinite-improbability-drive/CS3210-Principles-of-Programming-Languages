@@ -250,13 +250,22 @@ public class Node {
                 return value1 - value2;
         }
 
-        else if ( kind.equals("*") || kind.equals("/") ) {
-            double value1 = first.evaluate();
-            double value2 = second.evaluate();
-            if ( kind.equals("*") )
-                return value1 * value2;
-            else
-                return value1 / value2;
+        else if ( kind.equals("*") || kind.equals("/ ") ) {
+            if(first.kind.equals("*") || first.kind.equals("/ ")){
+               return first.evaluate();
+            }
+            else if(second.kind.equals("*") || second.kind.equals("/ ")){
+                return second.evaluate();
+            }
+            else{
+                double value1 = first.evaluate();
+                double value2 = second.evaluate();
+                if (kind.equals("*"))
+                    return value1 * value2;
+                else
+                    return value1 / value2;
+            }
+
         }
 
         else if ( kind.equals("input") ) {

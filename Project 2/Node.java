@@ -201,12 +201,13 @@ public class Node {
         else if ( kind.equals("sto") ) {
             double value = first.evaluate();
             table.store( info, value );
+            //System.out.println(table);
         }
 
         else if ( kind.equals("def")) {
         }
 
-        else if ( kind.equals("ifelse") ) {
+        else if ( kind.equals("ifElse") ) {
             double bool = first.evaluate();
             if (bool == 1) {
                 second.execute();
@@ -260,6 +261,19 @@ public class Node {
 
         else if ( kind.equals("input") ) {
             return keys.nextDouble();
+        }
+        else if(kind.equals("lt")){
+            //table.store(first.info, first.evaluate());
+            //table.store(second.info, second.evaluate());
+
+            double value1 = first.evaluate();
+            double value2 = second.evaluate();
+            if(value1 < value2){
+                return 1;
+            }
+            else{
+                return 0;
+            }
         }
 
         else if ( kind.equals("sqrt") || kind.equals("cos") ||

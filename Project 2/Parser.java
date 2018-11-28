@@ -243,6 +243,8 @@ public class Parser {
          token = lex.getNextToken();
          if ( token.matches("single", "(")) {// print <string>
             Node first = parseExpr();
+            Token p = lex.getNextToken();
+            errorCheck(p,"single", ")");
             return new Node( "prtexp", first, null, null );
          }
 

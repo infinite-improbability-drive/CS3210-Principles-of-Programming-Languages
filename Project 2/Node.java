@@ -182,6 +182,7 @@ public class Node {
                 if (paramNode != null) { paramNode = paramNode.second;}
                 if (argNode != null)   { argNode = argNode.second;}
             }
+            System.out.println(table);
             second.execute();
         }
 
@@ -198,6 +199,7 @@ public class Node {
             System.out.print( "\n" );
         }
 
+
         else if ( kind.equals("sto") ) {
             double value = first.evaluate();
             table.store( info, value );
@@ -207,6 +209,10 @@ public class Node {
         else if ( kind.equals("def")) {
         }
 
+        else if (kind.equals("return")) {
+            retVal = first.evaluate();
+            retBool = true;
+        }
         else if ( kind.equals("ifElse") ) {
             double bool = first.evaluate();
             if (bool == 1) {
@@ -219,10 +225,7 @@ public class Node {
             }
         }
 
-        else if (kind.equals("return")) {
-            retVal = first.evaluate();
-            retBool = true;
-        }
+
 
         else {
             error("Unknown kind of node [" + kind + "]");
@@ -236,6 +239,8 @@ public class Node {
         if ( kind.equals("num") ) {
             return Double.parseDouble( info );
         }
+
+
 
         else if ( kind.equals("var") ) {
             return table.retrieve( info );
@@ -251,20 +256,14 @@ public class Node {
         }
 
         else if ( kind.equals("*") || kind.equals("/ ") ) {
-            if(first.kind.equals("*") || first.kind.equals("/ ")){
-               return first.evaluate();
-            }
-            else if(second.kind.equals("*") || second.kind.equals("/ ")){
-                return second.evaluate();
-            }
-            else{
+
                 double value1 = first.evaluate();
                 double value2 = second.evaluate();
                 if (kind.equals("*"))
                     return value1 * value2;
                 else
                     return value1 / value2;
-            }
+
 
         }
 
@@ -330,7 +329,9 @@ public class Node {
                     if (tmp.second != null){
                         tmp = tmp.second;
                     }
-                    else {end = true;}
+                    else {
+                        end = true;
+                    }
                 }
             }
             // find and execute funcDef

@@ -199,8 +199,8 @@ public class Lexer {
                 else if ( data.equals("print") ) {
                     return new Token( "print", "" );
                 }
-                else if ( data.equals("newline") ) {
-                    return new Token( "bif0", data );
+                else if ( data.equals("nl") ) {
+                    return new Token( "newline", data );
                 }
                 else {// is just a variable
                     return new Token( "var", data );

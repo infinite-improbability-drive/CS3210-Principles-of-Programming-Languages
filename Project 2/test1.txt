@@ -2,6 +2,6 @@ main()
 
 
 def main()
-   x1 = (-2 - sqrt(24) ) / (2*2)
-   "x1: "    print(x1) nl
+
+
 end

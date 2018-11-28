@@ -293,6 +293,7 @@ public class Node {
           argNode = first;
           // find and execute funcDef
           Node tmp = funcRoot;
+          // find matching funcDef
           while (!foundOne && !end) {
             if (info.equals(tmp.first.info)) { foundOne = true; tmp.first.execute();}
             else {
@@ -300,6 +301,9 @@ public class Node {
                 else {end = true;}
             }
           }
+          // find and add funcDef params to new memtable
+          MemTable table2 = new MemTable();
+
           // find and execute funcDef
           retBool = false;
           return retVal;

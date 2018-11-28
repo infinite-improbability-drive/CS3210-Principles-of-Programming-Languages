@@ -15,7 +15,6 @@ public class Corgi {
     Node root = parser.parseProgram();
 
     // display parse tree for debugging/testing:
-    // TreeViewer viewer = new TreeViewer("Parse Tree", 0, 0, 2000, 1000, root );
 
     // execute the parse tree
     root.execute();

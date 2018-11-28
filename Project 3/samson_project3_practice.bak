@@ -1,0 +1,15 @@
+#lang racket
+(define (firstTour j n)
+ (cond
+   [(= j n) (cons n '())]
+   [(cons j(firstTour(+ j 1)n))]
+   )
+ )
+
+(define (genTours n)
+ (permutations (firstTour 2 n))
+ )
+
+(define (insert n)
+  (cons 1 (car (genTours n)))
+  )

@@ -1,13 +1,3 @@
-main()
-
-def fact( n )
-
-    "hello world"
-
-end
-
-def main()
-
-  fact(n)
-
-end
+4 1
+27 0
+26

@@ -3,6 +3,7 @@
     depending on the kind of node
 */
 
+import java.lang.reflect.Member;
 import java.util.*;
 import java.io.*;
 import java.awt.*;
@@ -22,7 +23,7 @@ public class Node {
 
     // memory table shared by all nodes
     // private static MemTable table = new MemTable();
-    private static ArrayList<MemTable> tables;
+    private static Stack<MemTable> tables;
     private static Scanner keys = new Scanner( System.in );
 
 
@@ -171,21 +172,23 @@ public class Node {
 
         }
         else if ( kind.equals("program")) {
-            tables = new ArrayList();
+            tables = new Stack<MemTable>();
             funcRoot = second;
             first.evaluate();
         }
 
         else if ( kind.equals("funcDef")) {
+            MemTable table = tables.pop();
             paramNode = first;
             System.out.println("param = " + first);
             // System.out.println("arg = " + argNode.first.evaluate());
             while (argNode != null && paramNode != null) {
-                tables.get(tables.size() - 1).store(paramNode.first.info, tables.get(tables.size() - 2).retrieve(argNode.first.info));
+                table.store(paramNode.first.info, argNode.first.evaluate());
                 // table.store(paramNode.first.info, argNode.first.evaluate());
                 if (paramNode != null) { paramNode = paramNode.second;}
                 if (argNode != null)   { argNode = argNode.second;}
             }
+            tables.push(table);
             System.out.println("table = " + tables.get(tables.size() - 1));
             second.execute();
         }
@@ -206,7 +209,9 @@ public class Node {
 
         else if ( kind.equals("sto") ) {
             double value = first.evaluate();
-            tables.get(tables.size() - 1).store( info, value );
+            MemTable table = tables.pop();
+            table.store(info, value);
+            tables.push(table);
             //System.out.println(table);
         }
 
@@ -247,8 +252,10 @@ public class Node {
 
 
         else if ( kind.equals("var") ) {
-            // return tables.get(tables.size() - 2).retrieve( info );
-            return tables.get(tables.size() - 1).retrieve( info );
+            MemTable table = tables.pop();
+            double value = table.retrieve(info);
+            tables.push(table);
+            return value;
         }
 
         else if ( kind.equals("+") || kind.equals("-") ) {
@@ -322,11 +329,11 @@ public class Node {
 
         else if ( kind.equals("funcCall") ) {
             boolean foundOne = false, end = false;
+            tables.push(new MemTable());
             argNode = first;
             // paramNode;
             // find and execute funcDef
             Node tmp = funcRoot;
-            tables.add(new MemTable());
             while (!foundOne && !end) {
                 if (info.equals(tmp.first.info)){
                     foundOne = true;
@@ -343,7 +350,7 @@ public class Node {
                 // paramNode = paramNode.second;
                 // argNode = argNode.second;
             }
-            tables.remove(tables.size() - 1);
+            tables.pop();
             retBool = false;
             return retVal;
         }

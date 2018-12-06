@@ -1,0 +1,13 @@
+myLast([],[]).
+myLast([A],A).
+myLast([_|T],A) :- myLast(T,A).
+rowBelow([A,B],[C]) :- C is B-A.
+rowBelow([A,B|R],[X|Y]) :- X is B-A,
+                           rowBelow([B|R],Y).
+goDown([A|[]],[A|[]]).
+goDown(A,[C|D]) :- myLast(A,C), rowBelow(A,B), goDown(B,D).
+
+nextItem(A,N) :- goDown(A,B), sumList(B,N).
+sumList([],0).
+sumList([H|T],R) :- sumList(T, Rest),
+                  R is H + Rest.

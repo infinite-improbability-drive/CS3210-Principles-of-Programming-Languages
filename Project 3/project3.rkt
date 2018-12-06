@@ -1,4 +1,4 @@
-; CS3210 Project 4: Lisp
+; CS3210 Project 3: Lisp
 ; Last Modified 12/04/2018
 ; Created by: Nick Barnes, Heather Minke, Peter Perez, John Samson and John Sanders
 ; Solution to Euclidian Traveling Salesman Problem

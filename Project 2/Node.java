@@ -180,16 +180,12 @@ public class Node {
         else if ( kind.equals("funcDef")) {
             MemTable table = tables.pop();
             paramNode = first;
-            System.out.println("param = " + first);
-            // System.out.println("arg = " + argNode.first.evaluate());
             while (argNode != null && paramNode != null) {
                 table.store(paramNode.first.info, argNode.first.evaluate());
-                // table.store(paramNode.first.info, argNode.first.evaluate());
                 if (paramNode != null) { paramNode = paramNode.second;}
                 if (argNode != null)   { argNode = argNode.second;}
             }
             tables.push(table);
-            System.out.println("table = " + tables.get(tables.size() - 1));
             second.execute();
         }
 
@@ -212,7 +208,6 @@ public class Node {
             MemTable table = tables.pop();
             table.store(info, value);
             tables.push(table);
-            //System.out.println(table);
         }
 
         else if ( kind.equals("def")) {
@@ -234,8 +229,6 @@ public class Node {
             }
         }
 
-
-
         else {
             error("Unknown kind of node [" + kind + "]");
         }
@@ -248,8 +241,6 @@ public class Node {
         if ( kind.equals("num") ) {
             return Double.parseDouble( info );
         }
-
-
 
         else if ( kind.equals("var") ) {
             MemTable table = tables.pop();
@@ -283,9 +274,6 @@ public class Node {
             return keys.nextDouble();
         }
         else if(kind.equals("lt")){
-            //table.store(first.info, first.evaluate());
-            //table.store(second.info, second.evaluate());
-
             double value1 = first.evaluate();
             double value2 = second.evaluate();
             if(value1 < value2){
@@ -331,7 +319,6 @@ public class Node {
             boolean foundOne = false, end = false;
             tables.push(new MemTable());
             argNode = first;
-            // paramNode;
             // find and execute funcDef
             Node tmp = funcRoot;
             while (!foundOne && !end) {

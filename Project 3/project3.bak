@@ -82,8 +82,7 @@
 ; calculate score given list of points x and tour y
 (define (score x y)
   (cond
-    ; [(= (length y) 1)(hypo (car x )(getItem (- (length x) 1) x))]
-    [(= (length y) 1)(hypo (car x) (getItem (-(car y) 1) x))]
+    [(= (length y) 1)(hypo (car x )(getItem (- (length x) 1) x))]
     [(null? (cdr x)) 0]
     [#t (+(hypo (getItem (-(car y) 1)  x) (getItem (-(car (cdr y)) 1) x))
          (score x (cdr y)))]

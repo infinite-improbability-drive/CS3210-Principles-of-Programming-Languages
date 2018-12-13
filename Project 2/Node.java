@@ -198,8 +198,18 @@ public class Node {
             System.out.print( value );
         }
 
+        else if ( kind.equals("round") ) {
+//            double value = first.evaluate();
+//            System.out.print( value );
+        }
+        else if ( kind.equals("trunc") ) {
+//            double value = first.evaluate();
+//            System.out.print( value );
+        }
+
         else if ( kind.equals("nl") ) {
-            System.out.print( "\n" );
+            System.out.println();
+            // System.out.print( "\n" );
         }
 
 
@@ -284,6 +294,71 @@ public class Node {
             }
         }
 
+        else if(kind.equals("le")){
+            double value1 = first.evaluate();
+            double value2 = second.evaluate();
+            if(value1 <= value2){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        else if(kind.equals("eq")){
+            double value1 = first.evaluate();
+            double value2 = second.evaluate();
+            if(value1 == value2){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        else if(kind.equals("ne")){
+            double value1 = first.evaluate();
+            double value2 = second.evaluate();
+            if(value1 != value2){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        else if(kind.equals("or")){
+            double value1 = first.evaluate();
+            double value2 = second.evaluate();
+            if(value1 != 0 || value2 != 0) {
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        else if(kind.equals("and")){
+            double value1 = first.evaluate();
+            double value2 = second.evaluate();
+            if(value1 != 0 && value2 != 0){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        else if(kind.equals("not")){
+            double value1 = first.evaluate();
+            if(value1 == 0){
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+
         else if ( kind.equals("sqrt") || kind.equals("cos") ||
                 kind.equals("sin") || kind.equals("atan")
         ) {
@@ -301,7 +376,6 @@ public class Node {
                 error("unknown function name [" + kind + "]");
                 return 0;
             }
-
         }
 
         else if ( kind.equals("pow") ) {

@@ -186,7 +186,8 @@ public class Lexer {
                     return new Token( "bif0", data );
                 }
                 else if ( data.equals("sqrt") || data.equals("cos") ||
-                        data.equals("sin") || data.equals("atan")
+                        data.equals("sin") || data.equals("atan") ||
+                        data.equals("not")
                 ) {
                     return new Token( "bif1", data );
                 }
@@ -197,8 +198,14 @@ public class Lexer {
                     return new Token( "bif2", data );
                 }
                 else if ( data.equals("print") ) {
-                    return new Token( "print", "" );
+                    return new Token( "print", "");
                 }
+//                else if ( data.equals("round") ) {
+//                    return new Token( "round", "");
+//                }
+//                else if ( data.equals("trunc") ) {
+//                    return new Token( "trunc", "");
+//                }
                 else if ( data.equals("nl") ) {
                     return new Token( "newline", data );
                 }

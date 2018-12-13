@@ -2,7 +2,7 @@ main()
 
 def fact( n )
 
-   if lt(n , 1)
+   if lt(n 1) 
       return 1
    else
       temp = fact( n-1 )

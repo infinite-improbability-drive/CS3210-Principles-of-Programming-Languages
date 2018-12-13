@@ -2,6 +2,7 @@ main()
 
 
 def main()
-
-
+"round(2.5): "  print( round(2.5) ) nl()
+"round(2.49999): "  print( round(2.49999) ) nl()
+"trunc(2.49999): "  print( trunc(2.49999) ) nl()
 end

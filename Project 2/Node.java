@@ -198,15 +198,6 @@ public class Node {
             System.out.print( value );
         }
 
-        else if ( kind.equals("round") ) {
-//            double value = first.evaluate();
-//            System.out.print( value );
-        }
-        else if ( kind.equals("trunc") ) {
-//            double value = first.evaluate();
-//            System.out.print( value );
-        }
-
         else if ( kind.equals("nl") ) {
             System.out.println();
             // System.out.print( "\n" );
@@ -360,7 +351,8 @@ public class Node {
         }
 
         else if ( kind.equals("sqrt") || kind.equals("cos") ||
-                kind.equals("sin") || kind.equals("atan")
+                kind.equals("sin") || kind.equals("atan") ||
+                kind.equals("round") || kind.equals("trunc")
         ) {
             double value = first.evaluate();
 
@@ -372,6 +364,10 @@ public class Node {
                 return Math.sin( Math.toRadians( value ) );
             else if ( kind.equals("atan") )
                 return Math.toDegrees( Math.atan( value ) );
+            else if ( kind.equals("round") )
+                return Math.round( value );
+            else if ( kind.equals("trunc") )
+                return Math.floor( value );
             else {
                 error("unknown function name [" + kind + "]");
                 return 0;

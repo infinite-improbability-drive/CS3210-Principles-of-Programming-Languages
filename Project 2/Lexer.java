@@ -187,8 +187,9 @@ public class Lexer {
                 }
                 else if ( data.equals("sqrt") || data.equals("cos") ||
                         data.equals("sin") || data.equals("atan") ||
-                        data.equals("not")
-                ) {
+                        data.equals("not") || data.equals("round") ||
+                        data.equals("trunc")
+                        ) {
                     return new Token( "bif1", data );
                 }
                 else if ( data.equals("pow") || data.equals("lt") ||

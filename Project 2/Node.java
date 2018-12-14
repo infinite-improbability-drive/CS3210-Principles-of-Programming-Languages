@@ -3,6 +3,7 @@
     depending on the kind of node
 */
 
+import java.lang.reflect.Member;
 import java.util.*;
 import java.io.*;
 import java.awt.*;
@@ -21,8 +22,8 @@ public class Node {
     private Node first, second, third;
 
     // memory table shared by all nodes
-    private static MemTable table = new MemTable();
-
+    // private static MemTable table = new MemTable();
+    private static Stack<MemTable> tables;
     private static Scanner keys = new Scanner( System.in );
 
 
@@ -171,18 +172,20 @@ public class Node {
 
         }
         else if ( kind.equals("program")) {
+            tables = new Stack<MemTable>();
             funcRoot = second;
             first.evaluate();
         }
 
         else if ( kind.equals("funcDef")) {
+            MemTable table = tables.pop();
             paramNode = first;
             while (argNode != null && paramNode != null) {
                 table.store(paramNode.first.info, argNode.first.evaluate());
                 if (paramNode != null) { paramNode = paramNode.second;}
                 if (argNode != null)   { argNode = argNode.second;}
             }
-            System.out.println(table);
+            tables.push(table);
             second.execute();
         }
 
@@ -196,14 +199,16 @@ public class Node {
         }
 
         else if ( kind.equals("nl") ) {
-            System.out.print( "\n" );
+            System.out.println();
+            // System.out.print( "\n" );
         }
 
 
         else if ( kind.equals("sto") ) {
             double value = first.evaluate();
-            table.store( info, value );
-            //System.out.println(table);
+            MemTable table = tables.pop();
+            table.store(info, value);
+            tables.push(table);
         }
 
         else if ( kind.equals("def")) {
@@ -225,8 +230,6 @@ public class Node {
             }
         }
 
-
-
         else {
             error("Unknown kind of node [" + kind + "]");
         }
@@ -240,10 +243,11 @@ public class Node {
             return Double.parseDouble( info );
         }
 
-
-
         else if ( kind.equals("var") ) {
-            return table.retrieve( info );
+            MemTable table = tables.pop();
+            double value = table.retrieve(info);
+            tables.push(table);
+            return value;
         }
 
         else if ( kind.equals("+") || kind.equals("-") ) {
@@ -271,9 +275,6 @@ public class Node {
             return keys.nextDouble();
         }
         else if(kind.equals("lt")){
-            //table.store(first.info, first.evaluate());
-            //table.store(second.info, second.evaluate());
-
             double value1 = first.evaluate();
             double value2 = second.evaluate();
             if(value1 < value2){
@@ -284,8 +285,74 @@ public class Node {
             }
         }
 
+        else if(kind.equals("le")){
+            double value1 = first.evaluate();
+            double value2 = second.evaluate();
+            if(value1 <= value2){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        else if(kind.equals("eq")){
+            double value1 = first.evaluate();
+            double value2 = second.evaluate();
+            if(value1 == value2){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        else if(kind.equals("ne")){
+            double value1 = first.evaluate();
+            double value2 = second.evaluate();
+            if(value1 != value2){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        else if(kind.equals("or")){
+            double value1 = first.evaluate();
+            double value2 = second.evaluate();
+            if(value1 != 0 || value2 != 0) {
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        else if(kind.equals("and")){
+            double value1 = first.evaluate();
+            double value2 = second.evaluate();
+            if(value1 != 0 && value2 != 0){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        else if(kind.equals("not")){
+            double value1 = first.evaluate();
+            if(value1 == 0){
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+
         else if ( kind.equals("sqrt") || kind.equals("cos") ||
-                kind.equals("sin") || kind.equals("atan")
+                kind.equals("sin") || kind.equals("atan") ||
+                kind.equals("round") || kind.equals("trunc")
         ) {
             double value = first.evaluate();
 
@@ -297,11 +364,14 @@ public class Node {
                 return Math.sin( Math.toRadians( value ) );
             else if ( kind.equals("atan") )
                 return Math.toDegrees( Math.atan( value ) );
+            else if ( kind.equals("round") )
+                return Math.round( value );
+            else if ( kind.equals("trunc") )
+                return Math.floor( value );
             else {
                 error("unknown function name [" + kind + "]");
                 return 0;
             }
-
         }
 
         else if ( kind.equals("pow") ) {
@@ -317,6 +387,7 @@ public class Node {
 
         else if ( kind.equals("funcCall") ) {
             boolean foundOne = false, end = false;
+            tables.push(new MemTable());
             argNode = first;
             // find and execute funcDef
             Node tmp = funcRoot;
@@ -333,8 +404,10 @@ public class Node {
                         end = true;
                     }
                 }
+                // paramNode = paramNode.second;
+                // argNode = argNode.second;
             }
-            // find and execute funcDef
+            tables.pop();
             retBool = false;
             return retVal;
         }

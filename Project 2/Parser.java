@@ -1,5 +1,5 @@
 /*
-    This class provides a recursive descent parser
+    This class provides a recursive descent parser 
     for Corgi (a simple calculator language),
     creating a parse tree which can be interpreted
     to simulate execution of a Corgi program
@@ -54,7 +54,6 @@ public class Parser {
                Node first = parseArgs();
                return new Node("funcCall", t.getDetails(), first, null, null);
 
-                }
             }
          }
       }
@@ -109,14 +108,9 @@ public class Parser {
       if ( v.isKind("eof") || w.isKind("eof") || x.isKind("eof") || y.isKind("eof") || z.isKind("eof") ) {
          return new Node("funcDef", null, null, null);
       }
-//      System.out.println("v = " + t.getDetails());
-//      System.out.println("w = " + f.getDetails());
-//      System.out.println("x = " + x.getDetails());
-//      System.out.println("y = " + y.getDetails());
-//      System.out.println("z = " + z.getDetails());
 
-        if (v.getDetails().equals("def")) {
-            if (w.isKind("var")) {
+      if (v.getDetails().equals("def")) {
+         if (w.isKind("var")) {
 //             return new Node("funcDef", w.getDetails(), null, null, null);
             if (y.matches("single", ")")) {
                // def <var> ( ) end |
@@ -152,38 +146,6 @@ public class Parser {
       }
       else { return null; }
 
-//      if (v.getDetails().equals("def") && w.isKind("var")) {
-//         if (y.getDetails().equals("(") && x.getDetails().equals(")")) {
-//            if (z.getDetails().equals("end")) {
-//               // def <var> ( ) end
-//               return new Node("funcDef", w.getDetails(), null, null, null);
-//            }
-//            else {
-//               lex.putBackToken(z);
-//               Node second = parseStatements();
-//               // def <var> ( ) <statements> end
-//               return new Node ("funcDef", w.getDetails(), null, second, null);
-//            }
-//         }
-//         else {
-//            lex.putBackToken(z);
-//            lex.putBackToken(x);
-//            Node first = parseParams();
-//            if (lex.getNextToken().toString().equals("end")) {
-//               // def <var> ( <params> ) end
-//               return new Node("funcDef", w.getDetails(), first, null, null);
-//            }
-//            else {
-//               // lex.putBackToken(x);
-//               Node second = parseStatements();
-//               // def <var> ( <params> ) <statements> end
-//               return new Node("funcDef", w.getDetails(), first, second, null);
-//            }
-//         }
-//      }
-//
-//      // System.exit(1);
-//      return null;
    }
 
    // <params> -> <var> | <var> , <params>
@@ -218,6 +180,7 @@ public class Parser {
 //      if ( token.isKind("eof") || token.matches("var","end") || token.matches("var", "else") ) {
          return new Node( "stmts", first, null, null );
       }
+      // if (token.isKind("prtstr"))
       else {
          lex.putBackToken( token );
          Node second = parseStatements();
@@ -234,6 +197,8 @@ public class Parser {
    //                 if <expr> <statements> else end |
    //                 if <expr> <statements> else <statements> end |
    //                 return <expr>
+   //                 print()
+   //                 ""
    private Node parseStatement() {
       System.out.println("-----> parsing <statement>:");
 
@@ -248,28 +213,39 @@ public class Parser {
             errorCheck(p,"single", ")");
             return new Node( "prtexp", first, null, null );
          }
-
-
       }
+
       else if ( token.isKind("string") ) {
          return new Node( "prtstr", token.getDetails(), null, null, null );
       }
 
-        }
-        else if ( token.isKind("string") ) {
-            return new Node( "prtstr", token.getDetails(), null, null, null );
-        }
+      else if ( token.isKind("round") ) {
+         token = lex.getNextToken();
+         if ( token.matches("single", "(")) {// print <string>
+            Node first = parseExpr();
+            Token p = lex.getNextToken();
+            errorCheck(p,"single", ")");
+            return new Node( "round", first, null, null );
+         }
+      }
+      else if ( token.isKind("trunc") ) {
+         token = lex.getNextToken();
+         if ( token.matches("single", "(")) {// print <string>
+            Node first = parseExpr();
+            Token p = lex.getNextToken();
+            errorCheck(p,"single", ")");
+            return new Node( "trunc", first, null, null );
+         }
+      }
 
-        // ---------------->>>  newline
-        else if ( token.isKind("newline") ) {
-            return new Node( "nl", null, null, null );
-        }
-
-        // --------------->>>   <var> = <expr>
-//      else if(token.isKind("single")){
-//         Node first = parseExpr();
-//         return new Node("statements", token.getDetails(), first, null, null);
-//      }
+      // ---------------->>>  newline
+      else if ( token.isKind("newline") ) {
+         Token p = lex.getNextToken();
+         errorCheck(p,"single", "(");
+         Token q = lex.getNextToken();
+         errorCheck(q,"single", ")");
+         return new Node( "nl", null, null, null );
+      }
 
       // --------------->>>   if/else
       //                 if <expr> else end |
@@ -284,18 +260,6 @@ public class Parser {
          return parseIfElse();
 
       }
-//      else if(token.matches("var", "else")){
-//         return null;
-//      }
-//      else if(token.matches("var", "end")){
-//         return null;
-//      }
-/*      else if (token.isKind("var")){
-         Token par = lex.getNextToken();
-
-         Node first = parseFuncCall();
-         return new Node("statement", first, null, null);
-      }*/
       else if(token.isKind("var")){
          Token p = lex.getNextToken();
          if(p.matches("single", "=")) {
